@@ -1,0 +1,178 @@
+/**
+ * UI: BASE: HEADER: MAIN
+ */
+
+header#header-main {
+  padding: 1.200em 1.500em;
+  @include clear();
+
+  div.logo {
+    float: left;
+
+    h1 {
+      color: #fff;
+      font-family: "jaf-facitweb";
+      font-size: 1.200em;
+      line-height: 125%;
+      -webkit-font-smoothing: antialiased;
+
+      a {
+        @include link-text($white,$grey-8,none,none);
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-7) {
+    padding: 0.800em 0 0 0.800em;
+
+    div.logo {
+      h1 {
+        font-size: 1.000em;
+      }
+    }
+  }
+}
+
+
+/**
+ * UI: BASE: NAVIGATION: MAIN
+ */
+
+nav#navigation-main {
+  float: right;
+  margin-top: 0.150em;
+
+  ul {
+    display: inline-block;
+    margin-right: 1.200em;
+
+    li {
+      display: inline-block;
+
+      a {
+        @include link-text($white,$grey-8,none,none);
+      }
+    }
+
+    &.list_pages {
+      li {
+        margin-right: 1.000em;
+      }
+    }
+
+    &.list_social-links {
+      li {
+        font-size: 1.200em;
+        margin-right: 0.500em;
+
+        a {
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  div.item_dribbble-radar {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+
+    a {
+      display: block;
+      padding-right: 0.300em;
+      @include transition(opacity 0.3s ease);
+
+      img {
+        position: relative;
+
+        &.mobile {
+          display: none;
+        }
+      }
+
+      span {
+        background: $green-1;
+        display: block;
+        height: 0.300em;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 0.300em;
+        @include border-radius(100%);
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-7) {
+    margin-top: 0;
+
+    ul {
+      display: none;
+    }
+
+    div.item_dribbble-radar {
+      bottom: 0.500em;
+      position: relative;
+
+      a {
+        padding: 0.500em 1.000em 0.250em 0.250em;
+
+        img {
+          &.mobile {
+            display: block;
+          }
+
+          &.screen {
+            display: none;
+          }
+        }
+
+        span {
+          right: 0.800em;
+          top: 0.500em;
+        }
+      }
+    }
+  }
+}
+
+
+/**
+ * UI: BASE: NAVIGATION: MOBILE
+ */
+
+nav#navigation-mobile {
+  bottom: 0.500em;
+  display: none;
+  float: right;
+  position: relative;
+
+  ul {
+    li {
+      &.item_navigation-main {
+        a {
+          display: block;
+          padding: 0.500em 0.250em;
+
+          span {
+            background: $white;
+            display: block;
+            height: 1px;
+            margin: 0.300em;
+            width: 1.800em;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-7) {
+    display: block;
+  }
+}

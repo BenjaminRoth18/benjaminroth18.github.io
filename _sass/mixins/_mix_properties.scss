@@ -1,0 +1,20 @@
+/**
+ * MIXINS: PROPERTIES
+ */
+
+@mixin clear($method: '') {
+  @if $method == overflow {
+    &:after {
+      overflow: hidden;
+      @include has-layout;
+    }
+  }
+
+  @else {
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+}
