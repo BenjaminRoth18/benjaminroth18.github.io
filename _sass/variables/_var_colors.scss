@@ -2,18 +2,19 @@
  * VARIABLES: COLORS
  */
 
-$black: #000;
+$color-black: #000;
 
-$green-1: #34d1a7;
+$color-green-1: #34d1a7;
 
-$grey-1: mix(white, $black, 10%);
-$grey-2: mix(white, $black, 20%);
-$grey-3: mix(white, $black, 30%);
-$grey-4: mix(white, $black, 40%);
-$grey-5: mix(white, $black, 50%);
-$grey-6: mix(white, $black, 60%);
-$grey-7: mix(white, $black, 70%);
-$grey-8: mix(white, $black, 80%);
-$grey-9: mix(white, $black, 90%);
+$color-grey-0-6: mix(white, $color-black, 6%);
+$color-grey-1: mix(white, $color-black, 10%);
+$color-grey-2: mix(white, $color-black, 20%);
+$color-grey-3: mix(white, $color-black, 30%);
+$color-grey-4: mix(white, $color-black, 40%);
+$color-grey-5: mix(white, $color-black, 50%);
+$color-grey-6: mix(white, $color-black, 60%);
+$color-grey-7: mix(white, $color-black, 70%);
+$color-grey-8: mix(white, $color-black, 80%);
+$color-grey-9: mix(white, $color-black, 90%);
 
-$white: #fff;
+$color-white: #fff;

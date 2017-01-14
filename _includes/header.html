@@ -6,40 +6,42 @@
     </div>
 
     <nav id="navigation-main">
-        <ul class="list_pages">
-            <li>
-                <a href="#">Home</a>
-            </li>
-            <li>
-                <a href="#">About Me</a>
-            </li>
-        </ul>
+        <div class="wrapper">
+            <ul class="list_pages">
+                <li>
+                    <a href="#">About Me</a>
+                </li>
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+            </ul>
 
-        <ul class="list_social-links">
-            <li>
-                <a href="#" class="icon-dribbble"><span>Dribbble</span></a>
-            </li>
-            <li>
-                <a href="#" class="icon-twitter"><span>Twitter</span></a>
-            </li>
-            <li>
-                <a href="#" class="icon-instagram"><span>Instagram</span></a>
-            </li>
-        </ul>
+            <ul class="list_social-links">
+                <li>
+                    <a href="#" class="icon-dribbble"><span>Dribbble</span></a>
+                </li>
+                <li>
+                    <a href="#" class="icon-twitter"><span>Twitter</span></a>
+                </li>
+                <li>
+                    <a href="#" class="icon-instagram"><span>Instagram</span></a>
+                </li>
+            </ul>
 
-        <div class="item_dribbble-radar {{include.navclass}}">
-            <a href="">
-                {% include svg/img_icon-dribbble.svg navclass='top' %}
-                {% include svg/img_icon-dribbble-mobile.svg %}
-                <span></span>
-            </a>
+            <div class="item_dribbble-radar {{include.navclass}}">
+                <a href="#" class="trigger_dribbble" title="Show dribbble stream">
+                    <strong>{% include svg/img_icon-dribbble.svg %}</strong>
+                    <em>{% include svg/img_icon-dribbble-mobile.svg %}</em>
+                    <span></span>
+                </a>
+            </div>
         </div>
     </nav>
 
     <nav id="navigation-mobile">
         <ul>
             <li class="item_navigation-main">
-                <a href="#" class="trigger_navigation-main">
+                <a href="#" class="trigger_navigation-main" title="">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -47,4 +49,12 @@
             </li>
         </ul>
     </nav>
+
+    <section id="layer_dribbble">
+        <a href="#" class="trigger_dribbble-close">
+            <span></span>
+            <span></span>
+        </a>
+    </section>
+
 </header>

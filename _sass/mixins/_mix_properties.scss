@@ -18,3 +18,56 @@
     }
   }
 }
+
+
+@mixin last-child($border-top: '',$border-right: '',$border-bottom: '',$border-left: '',$margin-top: '',$margin-right: '',$margin-bottom: '',$margin-left: '',$padding-top: '',$padding-right: '',$padding-bottom: '',$padding-left: '') {
+  &:last-child,&:last-of-type {
+    @if $border-top == true {
+      border-top: 0 none;
+    }
+
+    @if $border-right == true {
+      border-right: 0 none;
+    }
+
+    @if $border-bottom == true {
+      border-bottom: 0 none;
+    }
+
+    @if $border-left == true {
+      border-left: 0 none;
+    }
+
+    @if $margin-top == true {
+      margin-top: 0;
+    }
+
+    @if $margin-right == true {
+      margin-right: 0;
+    }
+
+    @if $margin-bottom == true {
+      margin-bottom: 0;
+    }
+
+    @if $margin-left == true {
+      margin-left: 0;
+    }
+
+    @if $padding-top == true {
+      padding-top: 0;
+    }
+
+    @if $padding-right == true {
+      padding-right: 0;
+    }
+
+    @if $padding-bottom == true {
+      padding-bottom: 0;
+    }
+
+    @if $padding-left == true {
+      padding-left: 0;
+    }
+  }
+}

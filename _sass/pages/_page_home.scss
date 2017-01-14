@@ -1,0 +1,28 @@
+/**
+ * PAGES: HOME
+ */
+
+div#content-home {
+  figure {
+    background: url(../images/bg/bg_about-me-portrait.jpg) 52% 0 no-repeat;
+    height: 110vh;
+  }
+
+  @media screen and (max-width: $break-width-1) {
+    figure {
+      background-size: 60%;
+    }
+  }
+
+  @media screen and (max-width: $break-width-7) {
+    figure {
+      background-size: 100%;
+    }
+  }
+
+  @media screen and (min-width: $break-width-1) and (max-height: $break-height-1){
+    figure {
+      background-size: contain;
+    }
+  }
+}

@@ -2,8 +2,12 @@
  * UI: DEFAULT
  */
 
+* {
+  @include box-sizing(border-box);
+}
+
 body {
-  background: #000;
+  background: $color-black;
   font-size: 1.250em;
   font-family: "jaf-facitweb";
   -webkit-font-smoothing: antialiased;
