@@ -79,9 +79,32 @@ var br = (function ($) {
             .register("screen and (max-width : " + viewports.break5 + "px)", handlerFactory("screen-" + viewports.break5 + "", "screen-" + viewports.break4 + ""))
             .register("screen and (max-width : " + viewports.break6 + "px)", handlerFactory("screen-" + viewports.break6 + "", "screen-" + viewports.break5 + ""))
             .register("screen and (max-width : " + viewports.break7 + "px)", handlerFactory("screen-" + viewports.break7 + "", "screen-" + viewports.break6 + ""))
-            .register("screen and (max-width : " + viewports.break8 + "px)", handlerFactory("screen-" + viewports.break8 + "", "screen-" + viewports.break7 + ""))
+            .register("screen and (min-width : " + viewports.break0 + "px)", handlerFactory("default", "screen-" + viewports.break1 + ""))
             .register("screen and (max-width : " + viewports.break6 + "px)", removeLayers())
             .register("screen and (max-width : " + viewports.break6 + "px)", moveFooterMain())
+    }
+
+    function initDribbbleStream() {
+        $.jribbble.setToken('74d8c12b39672eeb9210054fbe2f6010b9ac3b3ff9943b428da5cef831dd1c18');
+
+
+
+
+        $.jribbble.users('benjaminroth').shots({per_page: 24}).then(function(shots) {
+            var html = [];
+
+            shots.forEach(function(shot) {
+
+                var date_created = $.format.date(shot.created_at, "d.MMMM yyyy");
+
+                html.push('<li>');
+                html.push('<div class="field_image"><a href="' + shot.html_url + '" target="_blank" title="'+shot.title+'"><img src="' + shot.images.normal + '"></a></div>');
+                html.push('<div class="field_description"><h6><a href="' + shot.html_url + '" target="_blank" title="'+shot.title+'">'+shot.title+'</a></h6><p>' + date_created + '</p></div>');
+                html.push('</li>');
+            });
+
+            $('section#layer_dribbble ul.list_shots').html(html.join(''));
+        });
     }
 
     $(document).ready(function () {
@@ -90,8 +113,9 @@ var br = (function ($) {
         $body = $('body');
 
         initmobileMainNavigation();
-        initDribbble()
+        initDribbble();
         initEnquire();
+        initDribbbleStream();
     });
 
 }(jQuery));

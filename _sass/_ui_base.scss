@@ -31,7 +31,7 @@ header#header-main {
         font-size: 1.000em;
 
         a {
-          padding: 0.700em 0.500em;
+          padding: 0.900em 0.500em;
         }
       }
     }
@@ -55,7 +55,7 @@ nav#navigation-main {
       display: inline-block;
 
       a {
-        @include link-text($color-white,$color-grey-8,none,none);
+        @include link-text($color-white,$color-grey-6,none,none);
       }
     }
 
@@ -107,7 +107,7 @@ nav#navigation-main {
       }
 
       &:hover {
-        opacity: 0.8;
+        opacity: 0.6;
       }
     }
   }
@@ -121,7 +121,7 @@ nav#navigation-main {
 
     div.item_dribbble-radar {
       a {
-        padding: 0.500em 1.000em 0.250em 0.250em;
+        padding: 0.700em 1.000em 0.450em 0.250em;
 
         strong {
           display: none;
@@ -133,7 +133,7 @@ nav#navigation-main {
 
         span {
           right: 0.800em;
-          top: 0.500em;
+          top: 0.700em;
         }
       }
     }
@@ -219,7 +219,6 @@ nav#navigation-main {
 
   footer#footer-main {
     display: block;
-
     font-size: 0.750em;
   }
 }
@@ -240,7 +239,7 @@ nav#navigation-mobile {
       &.item_navigation-main {
         a {
           display: block;
-          padding: 0.600em 0.350em 0.650em 0.350em;
+          padding: 0.800em 0.350em 0.850em 0.350em;
 
           span {
             background: $color-white;
@@ -300,7 +299,7 @@ footer#footer-main {
  */
 
 section#layer_dribbble {
-  background: $color-grey-0-6;
+  background: $color-grey-1;
   height: 100vh;
   margin-right: -600px;
   max-width: 600px;
@@ -309,26 +308,114 @@ section#layer_dribbble {
   top: 0;
   width: 100%;
   z-index: 300;
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
   @include clear();
   @include transition(margin 0.3s ease);
 
-  a.trigger_dribbble-close {
-    display: inline-block;
-    float: right;
-    padding: 1.250em 0.650em 1.250em 0.650em;
+  header {
+    margin-bottom: 0.500em;
+    padding-top: 0.350em;
+    @include clear();
 
-    span {
-      background: $color-white;
-      display: block;
-      height: 1px;
-      width: 1.500em;
+    h4 {
+      color: $color-white;
+      float: left;
+      font-size: 1.100em;
+      font-weight: 600;
+      max-width: 70%;
+      overflow: hidden;
+      padding: 0.700em 0 1.000em 0.800em;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
 
-      &:nth-child(1) {
-        transform: rotate(45deg);
+    nav {
+      a.trigger_dribbble-close {
+        display: inline-block;
+        float: right;
+        padding: 1.250em 0.650em 1.250em 0.650em;
+
+        span {
+          background: $color-white;
+          display: block;
+          height: 1px;
+          width: 1.500em;
+
+          &:nth-child(1) {
+            transform: rotate(45deg);
+          }
+
+          &:nth-child(2) {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+
+  ul.list_shots {
+    li {
+      display: flex;
+      opacity: 0.75;
+      padding: 0.800em 1.000em 0.500em 1.000em;
+      @include transition(opacity 0.3s ease);
+
+      &:first-child {
+        padding-top: 0;
       }
 
-      &:nth-child(2) {
-        transform: rotate(-45deg);
+      &:hover {
+        opacity: 1;
+
+        div.field_description {
+          a {
+            @include link-text($color-white,$color-white,none,none);
+          }
+        }
+      }
+
+      &:nth-child(2n+2) {
+        background: $color-grey-1-1;
+      }
+
+      div.field_image {
+        height: 4.000em;
+        margin-right: 1.000em;
+        max-width: 4.000em;
+        overflow: hidden;
+        width: 25%;
+        @include border-radius(100%);
+
+        img {
+          height: 4.000em;
+          margin-left: -0.550em;
+        }
+      }
+
+      div.field_description {
+        align-self: center;
+        width: 70%;
+
+        h6 {
+          color: $color-grey-8;
+          font-size: 0.900em;
+          font-weight: 600;
+          line-height: 130%;
+          margin-bottom: 0.333em;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+          a {
+            @include link-text($color-grey-8,$color-white,none,none);
+          }
+        }
+
+        p {
+          font-size: 0.800em;
+          color: $color-grey-6;
+        }
       }
     }
   }
@@ -339,7 +426,23 @@ section#layer_dribbble {
  */
 
 .active_dribbble {
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+
   section#layer_dribbble {
     margin-right: 0;
+  }
+
+  @media screen and (max-width: $break-width-6) {
+    section#layer_dribbble {
+      max-width: none;
+      padding-bottom: 4.000em;
+
+      ul.list_shots {
+        font-size: 0.750em;
+      }
+    }
   }
 }

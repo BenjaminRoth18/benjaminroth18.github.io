@@ -9,22 +9,19 @@
         <div class="wrapper">
             <ul class="list_pages">
                 <li>
-                    <a href="#">About Me</a>
-                </li>
-                <li>
-                    <a href="#">Portfolio</a>
+                    <a href="{{ site.baseurl }}/">About Me</a>
                 </li>
             </ul>
 
             <ul class="list_social-links">
                 <li>
-                    <a href="#" class="icon-dribbble"><span>Dribbble</span></a>
+                    <a href="https://dribbble.com/BenjaminRoth" class="icon-dribbble" target="_blank" title="My shots on Dribbble"><span>Dribbble</span></a>
                 </li>
                 <li>
-                    <a href="#" class="icon-twitter"><span>Twitter</span></a>
+                    <a href="https://twitter.com/BennyRoth" class="icon-twitter" target="_blank" title="Follow me on Twitter"><span>Twitter</span></a>
                 </li>
                 <li>
-                    <a href="#" class="icon-instagram"><span>Instagram</span></a>
+                    <a href="https://www.instagram.com/bennyroth/" class="icon-instagram" target="_blank" title="Follow me on Instagram"><span>Instagram</span></a>
                 </li>
             </ul>
 
@@ -51,10 +48,19 @@
     </nav>
 
     <section id="layer_dribbble">
-        <a href="#" class="trigger_dribbble-close">
-            <span></span>
-            <span></span>
-        </a>
+        <header>
+            <h4>
+                Latest dribbble updates
+            </h4>
+            <nav>
+                <a href="#" class="trigger_dribbble-close">
+                    <span></span>
+                    <span></span>
+                </a>
+            </nav>
+        </header>
+
+        <ul class="list_shots"></ul>
     </section>
 
 </header>
