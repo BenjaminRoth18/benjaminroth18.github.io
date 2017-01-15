@@ -18,7 +18,7 @@ header#header-main {
 
       a {
         display: block;
-        @include link-text($color-white,$color-grey-8,none,none);
+        @include link-text($color-white,$color-grey-6,none,none);
       }
     }
   }
@@ -152,13 +152,14 @@ nav#navigation-main {
   width: 100%;
 
   nav#navigation-main {
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.92);
     font-size: 1.500em;
     height: 100vh;
     left: 0;
     position: absolute;
     top: 0;
     width: 100vw;
+    z-index: 200;
 
     > div.wrapper {
       align-items: center;
@@ -199,6 +200,7 @@ nav#navigation-main {
 
           span {
             margin: 0;
+            @include transition(background 0.3s ease);
 
             &:nth-child(1) {
               transform: rotate(45deg);
@@ -210,6 +212,12 @@ nav#navigation-main {
 
             &:nth-child(3) {
               transform: rotate(-45deg);
+            }
+          }
+
+          &:hover {
+            span {
+              background: $color-grey-7;
             }
           }
         }
@@ -336,11 +344,18 @@ section#layer_dribbble {
         float: right;
         padding: 1.250em 0.650em 1.250em 0.650em;
 
+        &:hover {
+          span {
+            background: $color-grey-7;
+          }
+        }
+
         span {
           background: $color-white;
           display: block;
           height: 1px;
           width: 1.500em;
+          @include transition(background 0.3s ease);
 
           &:nth-child(1) {
             transform: rotate(45deg);

@@ -6,17 +6,73 @@ div#content-home {
   figure {
     background: url(../images/bg/bg_about-me-portrait.jpg) 52% 0 no-repeat;
     height: 110vh;
+
+    figcaption {
+      padding: 0 10%;
+      position: relative;
+      top: 50vh;
+
+      > div.wrapper {
+        margin: 0 auto;
+        max-width: 1500px;
+      }
+
+      h1 {
+        color: $color-white;
+        font-size: 2.800em;
+        line-height: 130%;
+      }
+
+      p {
+        color: $color-white;
+        font-family: "crimson";
+        font-size: 1.800em;
+        line-height: 120%;
+        margin-bottom: 0.667em;
+        max-width: 960px;
+
+        a {
+          @include link-text($color-grey-6,$color-white,none,none);
+        }
+      }
+
+      div.field_button {
+        a {
+          background: $color-purple-1;
+          color: $color-white;
+          display: inline-block;
+          font-size: 1.400em;
+          padding: 0.857em 0.714em;
+          text-decoration: none;
+          @include border-radius(3px);
+        }
+      }
+    }
   }
 
   @media screen and (max-width: $break-width-1) {
     figure {
       background-size: 60%;
+
+      figcaption {
+        font-size: 0.750em;
+      }
     }
   }
 
   @media screen and (max-width: $break-width-7) {
     figure {
       background-size: 100%;
+
+      figcaption {
+        font-size: 0.556em;
+        padding: 0 1.500em;
+
+        div.field_button {
+          a {
+          }
+        }
+      }
     }
   }
 
