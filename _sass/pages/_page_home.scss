@@ -29,7 +29,11 @@ div#content-home {
         font-size: 1.800em;
         line-height: 120%;
         margin-bottom: 0.667em;
-        max-width: 960px;
+        max-width: 26.667em;
+
+        span {
+          display: none;
+        }
 
         a {
           @include link-text($color-grey-6,$color-white,none,none);
@@ -38,13 +42,13 @@ div#content-home {
 
       div.field_button {
         a {
-          background: $color-purple-1;
           color: $color-white;
           display: inline-block;
           font-size: 1.400em;
           padding: 0.857em 0.714em;
           text-decoration: none;
           @include border-radius(3px);
+          @include button-common($color-purple-1,$color-purple-1-9);
         }
       }
     }
@@ -52,24 +56,53 @@ div#content-home {
 
   @media screen and (max-width: $break-width-1) {
     figure {
-      background-size: 60%;
+      background-size: 50%;
 
       figcaption {
-        font-size: 0.750em;
+        font-size: 0.800em;
       }
     }
   }
 
-  @media screen and (max-width: $break-width-7) {
+  @media screen and (max-width: $break-width-1) and (orientation : portrait) {
     figure {
-      background-size: 100%;
+      background-size: 80%;
+    }
+  }
+
+  @media screen and (max-width: $break-width-3) {
+    figure {
+      background-size: 60%;
 
       figcaption {
-        font-size: 0.556em;
-        padding: 0 1.500em;
+        font-size: 0.700em;
+      }
+    }
+  }
 
-        div.field_button {
-          a {
+
+  @media screen and (max-width: $break-width-7) {
+    figure {
+      background-position: 50% 2vh;
+      background-size: 100%;
+      height: 80vh;
+
+      figcaption {
+        bottom: 5%;
+        font-size: 0.556em;
+        padding: 3.000em 1.500em 0 1.500em;
+        position: absolute;
+        text-align: center;
+        top: auto;
+        @include gradient(rgba(0,0,0,0.8) 80%, transparent 100%, vertical);
+
+        h1 {
+          display: none;
+        }
+
+        p {
+          span {
+            display: inline;
           }
         }
       }

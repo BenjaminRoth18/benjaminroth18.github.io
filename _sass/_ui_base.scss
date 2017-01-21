@@ -275,13 +275,13 @@ footer#footer-main {
   padding-bottom: 2.500em;
 
   p {
-    color: $color-grey-2;
+    color: $color-grey-3;
     font-size: 0.800em;
     line-height: 130%;
     text-align: center;
 
     a {
-      @include link-text($color-grey-2,$color-grey-3,underline,underline);
+      @include link-text($color-grey-3,$color-grey-4,underline,underline);
     }
   }
 
