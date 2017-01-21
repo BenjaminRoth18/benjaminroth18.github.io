@@ -291,26 +291,25 @@ header#header-main {
     display: table;
     clear: both; }
   header#header-main div.logo {
-    float: left; }
-    header#header-main div.logo h1 {
+    color: #fff;
+    float: left;
+    font-family: "jaf-facitweb";
+    font-size: 1.200em;
+    line-height: 125%;
+    -webkit-font-smoothing: antialiased; }
+    header#header-main div.logo a {
+      display: block;
       color: #fff;
-      font-family: "jaf-facitweb";
-      font-size: 1.200em;
-      line-height: 125%;
-      -webkit-font-smoothing: antialiased; }
-      header#header-main div.logo h1 a {
-        display: block;
-        color: #fff;
+      text-decoration: none; }
+      header#header-main div.logo a:hover {
+        color: #999999;
         text-decoration: none; }
-        header#header-main div.logo h1 a:hover {
-          color: #999999;
-          text-decoration: none; }
   @media screen and (max-width: 767px) {
     header#header-main {
       padding: 0; }
-      header#header-main div.logo h1 {
+      header#header-main div.logo {
         font-size: 1.000em; }
-        header#header-main div.logo h1 a {
+        header#header-main div.logo a {
           padding: 0.900em 0.500em; } }
 
 /**

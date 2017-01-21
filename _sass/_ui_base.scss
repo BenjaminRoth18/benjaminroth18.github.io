@@ -7,19 +7,16 @@ header#header-main {
   @include clear();
 
   div.logo {
+    color: #fff;
     float: left;
+    font-family: "jaf-facitweb";
+    font-size: 1.200em;
+    line-height: 125%;
+    -webkit-font-smoothing: antialiased;
 
-    h1 {
-      color: #fff;
-      font-family: "jaf-facitweb";
-      font-size: 1.200em;
-      line-height: 125%;
-      -webkit-font-smoothing: antialiased;
-
-      a {
-        display: block;
-        @include link-text($color-white,$color-grey-6,none,none);
-      }
+    a {
+      display: block;
+      @include link-text($color-white,$color-grey-6,none,none);
     }
   }
 
@@ -27,12 +24,10 @@ header#header-main {
     padding: 0;
 
     div.logo {
-      h1 {
-        font-size: 1.000em;
+      font-size: 1.000em;
 
-        a {
-          padding: 0.900em 0.500em;
-        }
+      a {
+        padding: 0.900em 0.500em;
       }
     }
   }
