@@ -1,0 +1,66 @@
+<header id="header-main">
+    <div class="logo">
+        <h1>
+            <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+        </h1>
+    </div>
+
+    <nav id="navigation-main">
+        <div class="wrapper">
+            <ul class="list_pages">
+                <li>
+                    <a href="{{ site.baseurl }}/">About Me</a>
+                </li>
+            </ul>
+
+            <ul class="list_social-links">
+                <li>
+                    <a href="{{ site.dribbble }}" class="icon-dribbble" target="_blank" title="My shots on Dribbble"><span>Dribbble</span></a>
+                </li>
+                <li>
+                    <a href="{{ site.twitter }}" class="icon-twitter" target="_blank" title="Follow me on Twitter"><span>Twitter</span></a>
+                </li>
+                <li>
+                    <a href="{{ site.instagram }}" class="icon-instagram" target="_blank" title="Follow me on Instagram"><span>Instagram</span></a>
+                </li>
+            </ul>
+
+            <div class="item_dribbble-radar {{include.navclass}}">
+                <a href="#" class="trigger_dribbble" title="Show dribbble stream">
+                    <strong>{% include svg/img_icon-dribbble.svg %}</strong>
+                    <em>{% include svg/img_icon-dribbble-mobile.svg %}</em>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <nav id="navigation-mobile">
+        <ul>
+            <li class="item_navigation-main">
+                <a href="#" class="trigger_navigation-main" title="">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="layer_dribbble">
+        <header>
+            <h4>
+                Latest updates
+            </h4>
+            <nav>
+                <a href="#" class="trigger_dribbble-close">
+                    <span></span>
+                    <span></span>
+                </a>
+            </nav>
+        </header>
+
+        <ul class="list_shots"></ul>
+    </section>
+
+</header>

@@ -1,0 +1,463 @@
+/**
+ * UI: BASE: HEADER: MAIN
+ */
+
+header#header-main {
+  padding: 1.200em 1.500em;
+  @include clear();
+
+  div.logo {
+    float: left;
+
+    h1 {
+      color: #fff;
+      font-family: "jaf-facitweb";
+      font-size: 1.200em;
+      line-height: 125%;
+      -webkit-font-smoothing: antialiased;
+
+      a {
+        display: block;
+        @include link-text($color-white,$color-grey-6,none,none);
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-width-6) {
+    padding: 0;
+
+    div.logo {
+      h1 {
+        font-size: 1.000em;
+
+        a {
+          padding: 0.900em 0.500em;
+        }
+      }
+    }
+  }
+}
+
+
+/**
+ * UI: BASE: NAVIGATION: MAIN
+ */
+
+nav#navigation-main {
+  float: right;
+  margin-top: 0.150em;
+
+  ul {
+    display: inline-block;
+    margin-right: 1.200em;
+
+    li {
+      display: inline-block;
+
+      a {
+        @include link-text($color-white,$color-grey-6,none,none);
+      }
+    }
+
+    &.list_pages {
+      li {
+        margin-right: 1.000em;
+        @include last-child($margin-right: true);
+      }
+    }
+
+    &.list_social-links {
+      li {
+        font-size: 1.200em;
+        margin-right: 0.500em;
+        @include last-child($margin-right: true);
+
+        a {
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  div.item_dribbble-radar {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+
+    a {
+      display: block;
+      padding-right: 0.300em;
+      @include transition(opacity 0.3s ease);
+
+      em {
+        display: none;
+      }
+
+      span {
+        background: $color-green-1;
+        display: block;
+        height: 0.300em;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 0.300em;
+        @include border-radius(100%);
+      }
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-width-6) {
+    margin-top: 0;
+
+    ul {
+      display: none;
+    }
+
+    div.item_dribbble-radar {
+      a {
+        padding: 0.700em 1.000em 0.450em 0.250em;
+
+        strong {
+          display: none;
+        }
+
+        em {
+          display: block;
+        }
+
+        span {
+          right: 0.800em;
+          top: 0.700em;
+        }
+      }
+    }
+  }
+}
+
+
+/**
+ * UI: BASE: NAVIGATION: MOBILE: ACTIVE
+ */
+
+.active_navigation-main {
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+
+  nav#navigation-main {
+    background: rgba(0,0,0,0.92);
+    font-size: 1.500em;
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: 200;
+
+    > div.wrapper {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: center;
+    }
+
+    ul {
+      display: block;
+      margin: 0.600em 0 1.000em 0;
+      text-align: center;
+
+      li {
+        margin: 0;
+      }
+
+      &.list_pages {
+        li {
+          display: block;
+          margin: 0.600em;
+          @include last-child($margin-bottom: true);
+        }
+      }
+    }
+
+    div.item_dribbble-radar {
+      display: none;
+    }
+  }
+
+  nav#navigation-mobile {
+    ul {
+      li.item_navigation-main {
+        a {
+          padding: 1.250em 0.650em 1.250em 0.650em;
+
+          span {
+            margin: 0;
+            @include transition(background 0.3s ease);
+
+            &:nth-child(1) {
+              transform: rotate(45deg);
+            }
+
+            &:nth-child(2) {
+              display: none;
+            }
+
+            &:nth-child(3) {
+              transform: rotate(-45deg);
+            }
+          }
+
+          &:hover {
+            span {
+              background: $color-grey-7;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer#footer-main {
+    display: block;
+    font-size: 0.750em;
+  }
+}
+
+
+/**
+ * UI: BASE: NAVIGATION: MOBILE
+ */
+
+nav#navigation-mobile {
+  display: none;
+  float: right;
+  position: relative;
+  z-index: 300;
+
+  ul {
+    li {
+      &.item_navigation-main {
+        a {
+          display: block;
+          padding: 0.800em 0.350em 0.850em 0.350em;
+
+          span {
+            background: $color-white;
+            display: block;
+            height: 1px;
+            margin: 0.300em;
+            width: 1.500em;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-width-6) {
+    display: block;
+  }
+}
+
+
+/**
+ * UI: BASE: FOOTER: MAIN
+ */
+
+footer#footer-main {
+  padding-bottom: 2.500em;
+
+  p {
+    color: $color-grey-3;
+    font-size: 0.800em;
+    line-height: 130%;
+    text-align: center;
+
+    a {
+      @include link-text($color-grey-3,$color-grey-4,underline,underline);
+    }
+  }
+
+  @media screen and (max-width: $break-width-6) {
+    display: none;
+
+    p {
+      span {
+        display: block;
+        margin-bottom: 0.150em;
+      }
+
+      strong {
+        display: none;
+      }
+    }
+  }
+}
+
+
+/**
+ * UI: BASE: LAYER: DRIBBBLE
+ */
+
+section#layer_dribbble {
+  background: $color-grey-1;
+  height: 100vh;
+  margin-right: -600px;
+  max-width: 600px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 300;
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+  @include clear();
+  @include transition(margin 0.3s ease);
+
+  header {
+    margin-bottom: 0.500em;
+    padding-top: 0.350em;
+    @include clear();
+
+    h4 {
+      color: $color-white;
+      float: left;
+      font-size: 1.100em;
+      font-weight: 600;
+      max-width: 70%;
+      overflow: hidden;
+      padding: 0.700em 0 1.000em 0.800em;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    nav {
+      a.trigger_dribbble-close {
+        display: inline-block;
+        float: right;
+        padding: 1.250em 0.650em 1.250em 0.650em;
+
+        &:hover {
+          span {
+            background: $color-grey-7;
+          }
+        }
+
+        span {
+          background: $color-white;
+          display: block;
+          height: 1px;
+          width: 1.500em;
+          @include transition(background 0.3s ease);
+
+          &:nth-child(1) {
+            transform: rotate(45deg);
+          }
+
+          &:nth-child(2) {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+
+  ul.list_shots {
+    li {
+      display: flex;
+      opacity: 0.75;
+      padding: 0.800em 1.000em 0.500em 1.000em;
+      @include transition(opacity 0.3s ease);
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &:hover {
+        opacity: 1;
+
+        div.field_description {
+          a {
+            @include link-text($color-white,$color-white,none,none);
+          }
+        }
+      }
+
+      &:nth-child(2n+2) {
+        background: $color-grey-1-1;
+      }
+
+      div.field_image {
+        height: 4.000em;
+        margin-right: 1.000em;
+        max-width: 4.000em;
+        overflow: hidden;
+        width: 25%;
+        @include border-radius(100%);
+
+        img {
+          height: 4.000em;
+          margin-left: -0.550em;
+        }
+      }
+
+      div.field_description {
+        align-self: center;
+        width: 70%;
+
+        h6 {
+          color: $color-grey-8;
+          font-size: 0.900em;
+          font-weight: 600;
+          line-height: 130%;
+          margin-bottom: 0.333em;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+          a {
+            @include link-text($color-grey-8,$color-white,none,none);
+          }
+        }
+
+        p {
+          font-size: 0.800em;
+          color: $color-grey-6;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * UI: BASE: LAYER: DRIBBBLE: ACTIVE
+ */
+
+.active_dribbble {
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+
+  section#layer_dribbble {
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: $break-width-6) {
+    section#layer_dribbble {
+      max-width: none;
+      padding-bottom: 4.000em;
+
+      ul.list_shots {
+        font-size: 0.750em;
+      }
+    }
+  }
+}

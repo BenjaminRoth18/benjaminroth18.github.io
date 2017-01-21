@@ -1,0 +1,13 @@
+/**
+ * MIXINS: LINKS
+ */
+
+@mixin link-text($text-color: $color-red-2, $text-color-hover: $color-red-2-8,$text-decoration: underline,$text-decoration-hover: none) {
+  color: $text-color;
+  text-decoration: $text-decoration;
+
+  &:hover {
+    color: $text-color-hover;
+    text-decoration: $text-decoration-hover;
+  }
+}

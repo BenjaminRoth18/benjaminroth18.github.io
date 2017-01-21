@@ -1,0 +1,22 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Benjamin Roth.
+email: benjaminroth18@gmail.com
+description: UX Designer and Fronend Developer
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://benjaminroth18.github.io" # the base hostname & protocol for your site
+dribbble: https://dribbble.com/BenjaminRoth
+instagram: https://www.instagram.com/benjaminroth18/
+twitter: https://twitter.com/BennyRoth
+
+# Build settings
+markdown: kramdown
+
+collections:
+- home

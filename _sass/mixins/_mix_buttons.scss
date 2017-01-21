@@ -1,0 +1,11 @@
+/**
+ * MIXINS: BUTTONS
+ */
+
+@mixin button-common($color,$color-hover) {
+  background: $color;
+
+  &:hover {
+    background: $color-hover;
+  }
+}
