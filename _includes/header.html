@@ -1,17 +1,17 @@
 <header id="header-main">
     <div class="logo">
-        <a href="{{ site.baseurl }}/" title="{{ site.title }}">{{ site.title }}</a>
+        <a href="{{ site.baseurl }}/" title="{{ site.title }}"><img src="/images/base/logo.svg" alt=""></a>
     </div>
 
     <nav id="navigation-main">
         <div class="wrapper">
-            <ul class="list_pages">
+            <ul class="list-pages">
                 <li>
                     <a href="{{ site.baseurl }}/">About Me</a>
                 </li>
             </ul>
 
-            <ul class="list_social-links">
+            <ul class="list-social-links">
                 <li>
                     <a href="{{ site.dribbble }}" class="icon-dribbble" target="_blank" title="My shots on Dribbble"><span>Dribbble</span></a>
                 </li>
@@ -23,8 +23,8 @@
                 </li>
             </ul>
 
-            <div class="item_dribbble-radar {{include.navclass}}">
-                <a href="#" class="trigger_dribbble" title="Show dribbble stream">
+            <div class="item-dribbble-radar {{include.navclass}}">
+                <a href="#" class="trigger-dribbble" title="Show dribbble stream">
                     <strong>{% include svg/img_icon-dribbble.svg %}</strong>
                     <em>{% include svg/img_icon-dribbble-mobile.svg %}</em>
                     <span></span>
@@ -35,8 +35,8 @@
 
     <nav id="navigation-mobile">
         <ul>
-            <li class="item_navigation-main">
-                <a href="#" class="trigger_navigation-main" title="">
+            <li class="item-navigation-main">
+                <a href="#" class="trigger-navigation-main" title="">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -45,20 +45,20 @@
         </ul>
     </nav>
 
-    <section id="layer_dribbble">
+    <section id="layer-dribbble">
         <header>
             <h4>
                 Latest updates
             </h4>
             <nav>
-                <a href="#" class="trigger_dribbble-close">
+                <a href="#" class="trigger-dribbble-close">
                     <span></span>
                     <span></span>
                 </a>
             </nav>
         </header>
 
-        <ul class="list_shots"></ul>
+        <ul class="list-shots"></ul>
     </section>
 
 </header>

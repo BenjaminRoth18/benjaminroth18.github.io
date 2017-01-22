@@ -3,7 +3,7 @@
  */
 
 header#header-main {
-  padding: 1.200em 1.500em;
+  padding: 0.800em 1.500em 0.400em 1.500em;
   @include clear();
 
   div.logo {
@@ -17,6 +17,10 @@ header#header-main {
     a {
       display: block;
       @include link-text($color-white,$color-grey-6,none,none);
+
+      img {
+        width: 40px;
+      }
     }
   }
 
@@ -24,10 +28,15 @@ header#header-main {
     padding: 0;
 
     div.logo {
-      font-size: 1.000em;
+      position: relative;
+      top: 0.150em;
 
       a {
-        padding: 0.900em 0.500em;
+        padding: 0.500em;
+
+        img {
+          width: 30px;
+        }
       }
     }
   }
@@ -54,14 +63,14 @@ nav#navigation-main {
       }
     }
 
-    &.list_pages {
+    &.list-pages {
       li {
         margin-right: 1.000em;
         @include last-child($margin-right: true);
       }
     }
 
-    &.list_social-links {
+    &.list-social-links {
       li {
         font-size: 1.200em;
         margin-right: 0.500em;
@@ -76,7 +85,7 @@ nav#navigation-main {
     }
   }
 
-  div.item_dribbble-radar {
+  div.item-dribbble-radar {
     display: inline-block;
     position: relative;
     vertical-align: middle;
@@ -114,9 +123,9 @@ nav#navigation-main {
       display: none;
     }
 
-    div.item_dribbble-radar {
+    div.item-dribbble-radar {
       a {
-        padding: 0.700em 1.000em 0.450em 0.250em;
+        padding: 0.700em 1.000em 0.650em 0.250em;
 
         strong {
           display: none;
@@ -140,7 +149,7 @@ nav#navigation-main {
  * UI: BASE: NAVIGATION: MOBILE: ACTIVE
  */
 
-.active_navigation-main {
+.active-navigation-main {
   height: 100%;
   overflow: hidden;
   position: fixed;
@@ -173,7 +182,7 @@ nav#navigation-main {
         margin: 0;
       }
 
-      &.list_pages {
+      &.list-pages {
         li {
           display: block;
           margin: 0.600em;
@@ -182,14 +191,14 @@ nav#navigation-main {
       }
     }
 
-    div.item_dribbble-radar {
+    div.item-dribbble-radar {
       display: none;
     }
   }
 
   nav#navigation-mobile {
     ul {
-      li.item_navigation-main {
+      li.item-navigation-main {
         a {
           padding: 1.250em 0.650em 1.250em 0.650em;
 
@@ -239,7 +248,7 @@ nav#navigation-mobile {
 
   ul {
     li {
-      &.item_navigation-main {
+      &.item-navigation-main {
         a {
           display: block;
           padding: 0.800em 0.350em 0.850em 0.350em;
@@ -249,7 +258,7 @@ nav#navigation-mobile {
             display: block;
             height: 1px;
             margin: 0.300em;
-            width: 1.500em;
+            width: 1.200em;
           }
         }
       }
@@ -301,7 +310,7 @@ footer#footer-main {
  * UI: BASE: LAYER: DRIBBBLE
  */
 
-section#layer_dribbble {
+section#layer-dribbble {
   background: $color-grey-1;
   height: 100vh;
   margin-right: -600px;
@@ -334,7 +343,7 @@ section#layer_dribbble {
     }
 
     nav {
-      a.trigger_dribbble-close {
+      a.trigger-dribbble-close {
         display: inline-block;
         float: right;
         padding: 1.250em 0.650em 1.250em 0.650em;
@@ -349,7 +358,7 @@ section#layer_dribbble {
           background: $color-white;
           display: block;
           height: 1px;
-          width: 1.500em;
+          width: 1.200em;
           @include transition(background 0.3s ease);
 
           &:nth-child(1) {
@@ -364,7 +373,7 @@ section#layer_dribbble {
     }
   }
 
-  ul.list_shots {
+  ul.list-shots {
     li {
       display: flex;
       opacity: 0.75;
@@ -378,7 +387,7 @@ section#layer_dribbble {
       &:hover {
         opacity: 1;
 
-        div.field_description {
+        div.field-description {
           a {
             @include link-text($color-white,$color-white,none,none);
           }
@@ -389,7 +398,7 @@ section#layer_dribbble {
         background: $color-grey-1-1;
       }
 
-      div.field_image {
+      div.field-image {
         height: 4.000em;
         margin-right: 1.000em;
         max-width: 4.000em;
@@ -403,7 +412,7 @@ section#layer_dribbble {
         }
       }
 
-      div.field_description {
+      div.field-description {
         align-self: center;
         width: 70%;
 
@@ -435,22 +444,22 @@ section#layer_dribbble {
  * UI: BASE: LAYER: DRIBBBLE: ACTIVE
  */
 
-.active_dribbble {
+.active-dribbble {
   height: 100%;
   overflow: hidden;
   position: fixed;
   width: 100%;
 
-  section#layer_dribbble {
+  section#layer-dribbble {
     margin-right: 0;
   }
 
   @media screen and (max-width: $break-width-6) {
-    section#layer_dribbble {
+    section#layer-dribbble {
       max-width: none;
       padding-bottom: 4.000em;
 
-      ul.list_shots {
+      ul.list-shots {
         font-size: 0.750em;
       }
     }

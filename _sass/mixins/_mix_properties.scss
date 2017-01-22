@@ -71,3 +71,34 @@
     }
   }
 }
+
+
+@mixin icon($method,$icon,$font-size,$margin,$space-bottom: 0) {
+  @if $method == before {
+    &:before {
+      bottom: $space-bottom;
+      content: $icon;
+      display: inline-block;
+      font-family: "Fontello";
+      font-size: $font-size;
+      font-style: normal;
+      line-height: 100%;
+      margin-right: $margin;
+      position: relative;
+    }
+  }
+
+  @else if $method == after {
+    &:after {
+      bottom: $space-bottom;
+      content: $icon;
+      display: inline-block;
+      font-family: "Fontello";
+      font-size: $font-size;
+      font-style: normal;
+      line-height: 100%;
+      margin-left: $margin;
+      position: relative;
+    }
+  }
+}

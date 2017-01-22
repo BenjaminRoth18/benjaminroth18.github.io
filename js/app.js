@@ -14,26 +14,26 @@ var br = (function ($) {
     };
 
     function initmobileMainNavigation() {
-        $('nav#navigation-mobile').on('click','a.trigger_navigation-main',function() {
-            $html.toggleClass('active_navigation-main');
+        $('nav#navigation-mobile').on('click','a.trigger-navigation-main',function() {
+            $html.toggleClass('active-navigation-main');
         });
     }
 
     function initDribbble() {
-        $('nav#navigation-main').on('click','a.trigger_dribbble',function() {
-            $html.addClass('active_dribbble');
+        $('nav#navigation-main').on('click','a.trigger-dribbble',function() {
+            $html.addClass('active-dribbble');
         });
 
-        $('section#layer_dribbble').on('click','a.trigger_dribbble-close',function() {
-            $html.removeClass('active_dribbble');
+        $('section#layer-dribbble').on('click','a.trigger-dribbble-close',function() {
+            $html.removeClass('active-dribbble');
         });
 
-        $('nav#navigation-main,section#layer_dribbble').on('click',function(e) {
+        $('nav#navigation-main,section#layer-dribbble').on('click',function(e) {
             e.stopPropagation();
         });
 
         $body.on('click',function() {
-            $html.removeClass('active_dribbble');
+            $html.removeClass('active-dribbble');
         });
     }
 
@@ -55,7 +55,7 @@ var br = (function ($) {
             return {
                 match: function () {},
                 unmatch: function () {
-                    $html.removeClass('active_navigation-main');
+                    $html.removeClass('active-navigation-main');
                 }
             };
         }
@@ -86,10 +86,6 @@ var br = (function ($) {
 
     function initDribbbleStream() {
         $.jribbble.setToken('74d8c12b39672eeb9210054fbe2f6010b9ac3b3ff9943b428da5cef831dd1c18');
-
-
-
-
         $.jribbble.users('benjaminroth').shots({per_page: 24}).then(function(shots) {
             var html = [];
 
@@ -98,12 +94,12 @@ var br = (function ($) {
                 var date_created = $.format.date(shot.created_at, "d.MMMM yyyy");
 
                 html.push('<li>');
-                html.push('<div class="field_image"><a href="' + shot.html_url + '" target="_blank" title="'+shot.title+'"><img src="' + shot.images.normal + '"></a></div>');
-                html.push('<div class="field_description"><h6><a href="' + shot.html_url + '" target="_blank" title="'+shot.title+'">'+shot.title+'</a></h6><p>' + date_created + '</p></div>');
+                html.push('<div class="field-image"><a href="' + shot.html_url + '" target="_blank" title="'+shot.title+'"><img src="' + shot.images.normal + '"></a></div>');
+                html.push('<div class="field-description"><h6><a href="' + shot.html_url + '" target="_blank" title="'+shot.title+'">'+shot.title+'</a></h6><p>' + date_created + '</p></div>');
                 html.push('</li>');
             });
 
-            $('section#layer_dribbble ul.list_shots').html(html.join(''));
+            $('section#layer-dribbble ul.list-shots').html(html.join(''));
         });
     }
 
