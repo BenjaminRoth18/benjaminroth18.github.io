@@ -1,0 +1,52 @@
+/**
+ * UI: LISTS: PROJECTS
+ */
+
+ul.list-projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  @include wrapper($max-width-1);
+
+  li {
+    align-self: center;
+    padding: 2% 4%;
+    width: 50%;
+
+    div.field-image {
+      margin-bottom: 0.500em;
+    }
+
+    div.field-caption {
+      text-align: left;
+
+      h3 {
+        font-size: 1.500em;
+        font-weight: 600;
+        line-height: 115%;
+        margin-bottom: 0.267em;
+
+        a {
+          @include link-text($color-black,$color-gold-1,none,none);
+        }
+      }
+
+      p {
+        color: $color-grey-3;
+        line-height: 130%;
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-width-8) {
+    display: block;
+    width: $width-base;
+
+    li {
+      margin-bottom: 3.000em;
+      padding: 0;
+      width: 100%;
+    }
+  }
+}

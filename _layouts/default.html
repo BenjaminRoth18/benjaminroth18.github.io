@@ -3,17 +3,13 @@
 
   {% include head.html %}
 
-  <body class="page-home">
+  <body class="{% if page.slug %}{{ page.slug }}{% endif %}">
 
     {% include header.html %}
 
-    {% for page in site.home %}
-
-      <main>
-        {{ page.content }}
-      </main>
-
-    {% endfor %}
+    <main>
+      {{ content }}
+    </main>
 
     {% include footer.html %}
 

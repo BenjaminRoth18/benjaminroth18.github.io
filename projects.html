@@ -1,0 +1,27 @@
+---
+layout: default
+permalink: /projects/
+---
+
+<div id="content-projects-overview">
+    <ul class="list-projects">
+        {% for post in site.posts %}
+            <li>
+                <div class="field-image">
+                    <a href="{{ post.url }}" title="{{ post.title }}">
+                        <img src="{{ post.imageteaser }}" srcset="{{ post.imageteaser }} 1x, {{ post.imageteaser2x }} 2x"alt="{{ post.title }}">
+                    </a>
+                </div>
+
+                <div class="field-caption">
+                    <h3>
+                        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                    </h3>
+                    <p>
+                        {{ post.description }}
+                    </p>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

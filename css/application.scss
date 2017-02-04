@@ -3,21 +3,28 @@
 ---
 
 @import
-"includes/inc_reset",
+"includes/inc-reset",
 
-"variables/var_colors",
-"variables/var_viewports",
+"variables/var-colors",
+"variables/var-layout",
+"variables/var-viewports",
 
 "fonts/fontello/fontello",
 
-"mixins/mix_buttons",
-"mixins/mix_css3",
-"mixins/mix_links",
-"mixins/mix_properties",
+"mixins/mix-buttons",
+"mixins/mix-css3",
+"mixins/mix-links",
+"mixins/mix-properties",
 
-"ui_base",
-"ui_default",
+"ui-base",
+"ui-default",
+"ui-lists",
+"ui-project",
 
-"pages/page_home"
+"pages/page-home",
+"pages/page-projects-overview",
+
+"posts/post-carnival",
+"posts/post-lively"
 ;
 

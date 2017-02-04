@@ -8,7 +8,7 @@
 # Site settings
 title: Benjamin Roth.
 email: benjaminroth18@gmail.com
-description: UX Designer and Fronend Developer
+description: UX Designer and Frontend Developer
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://benjaminroth18.github.io" # the base hostname & protocol for your site
 dribbble: https://dribbble.com/BenjaminRoth
@@ -18,5 +18,12 @@ twitter: https://twitter.com/BennyRoth
 # Build settings
 markdown: kramdown
 
+gems: [jekyll-paginate]
+
+paginate: 5
+
 collections:
-- home
+ home:
+ projects:
+  output: true
+  permalink: /:collection/:path/

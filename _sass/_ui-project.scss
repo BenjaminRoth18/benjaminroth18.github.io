@@ -1,0 +1,179 @@
+/**
+ * UI: ARTICLE
+ */
+
+header.header-article {
+  padding: 10.000em 0 10.000em 0;
+
+  > div.wrapper {
+    position: relative;
+    @include wrapper($max-width-2,$width-1,$width-base);
+  }
+
+  div.info {
+    max-width: $max-width-4;
+
+    h1 {
+      font-size: 2.500em;
+      font-weight: 600;
+      line-height: 115%;
+      margin-bottom: 0.200em;
+
+      &:before {
+        background: $color-grey-8;
+        content: "";
+        display: block;
+        height: 2px;
+        margin-bottom: 1.000em;
+        width: 1.600em;
+      }
+    }
+
+    p {
+      font-size: 1.200em;
+      line-height: 145%;
+      margin-bottom: 1.000em;
+    }
+
+    ul {
+      li {
+        display: inline-block;
+        font-size: 1.200em;
+        font-style: italic;
+        margin-bottom: 0.500em;
+        opacity: 0.6;
+
+        &:after {
+          content: "/";
+          display: inline-block;
+          margin: 0 0.083em 0 0.333em;
+          opacity: 0.3;
+        }
+
+        &:last-child {
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-width-8) {
+    padding: 5.000em 0;
+
+    div.info {
+      h1 {
+        font-size: 2.000em;
+      }
+
+      p {
+        font-size: 1.000em;
+      }
+
+      ul {
+        li {
+          font-size: 1.000em;
+        }
+      }
+    }
+  }
+}
+
+
+article.article-project {
+  padding: 2.000em 0;
+  @include wrapper($max-width-1,$width-base);
+
+  h4 {
+    font-size: 1.500em;
+    font-weight: 600;
+    margin-bottom: 0.200em;
+    @include wrapper($max-width-4);
+  }
+
+  h5 {
+    font-size: 1.200em;
+    font-weight: 600;
+    margin-bottom: 0.250em;
+    @include wrapper($max-width-4);
+  }
+
+  p {
+    font-size: 1.200em;
+    line-height: 160%;
+    margin-bottom: 1.250em;
+    @include wrapper($max-width-4);
+
+    a {
+      @include link-text($color-gold-1,$color-gold-1-8,none,none);
+    }
+  }
+
+  img {
+    display: block;
+    padding: 2.000em 0 2.000em 0;
+  }
+
+  @media screen and (max-width: $break-width-8) {
+    padding: 1.500em 0;
+
+    h4 {
+      font-size: 1.200em;
+    }
+
+    p {
+      font-size: 1.000em;
+    }
+
+    img {
+      padding: 1.000em 0;
+    }
+  }
+}
+
+nav.navigation-pager {
+  border-top: solid 1px $color-grey-9;
+  padding-top: 1.200em;
+  @include clear();
+  @include wrapper($max-width-4,$width-base);
+
+  p {
+    display: inline-block;
+    font-size: 1.200em;
+    white-space: nowrap;
+
+    &.col-left {
+      float: left;
+
+      a {
+        @include icon(before,"\e801",0.833em,0.500em,0.100em);
+      }
+    }
+
+    &.col-right {
+      float: right;
+
+      a {
+        @include icon(after,"\e800",0.833em,0.500em,0.100em);
+      }
+    }
+
+    a {
+      @include link-text($color-gold-1,$color-gold-1-8,none,none);
+    }
+  }
+
+  @media screen and (max-width: $break-width-8) {
+    text-align: center;
+
+    p.col-left,
+    p.col-right {
+      float: none;
+
+      span {
+        display: none;
+      }
+    }
+  }
+}

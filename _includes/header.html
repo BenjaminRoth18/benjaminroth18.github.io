@@ -1,13 +1,17 @@
 <header id="header-main">
+
     <div class="logo">
-        <a href="{{ site.baseurl }}/" title="{{ site.title }}"><img src="/images/base/logo.svg" alt="{{ site.title }}"></a>
+        <a href="{{ site.baseurl }}/" title="{{ site.title }}">{% include svg/img-icon-logo.svg %}</a>
     </div>
 
     <nav id="navigation-main">
         <div class="wrapper">
             <ul class="list-pages">
                 <li>
-                    <a href="{{ site.baseurl }}/">About Me</a>
+                    <a href="{{ site.baseurl }}/" title="About me">About me</a>
+                </li>
+                <li>
+                    <a href="{{ site.baseurl }}/projects/" title="Projects">Projects</a>
                 </li>
             </ul>
 
@@ -25,9 +29,13 @@
 
             <div class="item-dribbble-radar {{include.navclass}}">
                 <a href="#" class="trigger-dribbble" title="Show dribbble stream">
-                    <strong>{% include svg/img_icon-dribbble.svg %}</strong>
-                    <em>{% include svg/img_icon-dribbble-mobile.svg %}</em>
-                    <span></span>
+                    <strong>{% include svg/img-icon-dribbble.svg %}</strong>
+                    <em>{% include svg/img-icon-dribbble-mobile.svg %}</em>
+                    <sup class="circle">
+                        <span>
+                            <sub></sub>
+                        </span>
+                    </sup>
                 </a>
             </div>
         </div>

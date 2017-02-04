@@ -1,0 +1,108 @@
+/**
+ * POSTS: LIVELY
+ */
+
+body.project-lively {
+  header#header-main {
+    background: $color-purple-1;
+    @include header(white);
+  }
+
+  header.header-article {
+    background: $color-purple-1 url(/images/projects/lively/lively-bg.svg) 50% 95% no-repeat;
+    padding:  5.000em 0 28.000em 0;
+
+    > div.wrapper {
+      @include wrapper($max-width-2,$width-base);
+    }
+
+    div.info {
+      color: $color-white;
+      @include wrapper($max-width-4);
+
+      h1 {
+        &:before {
+          background: $color-white;
+        }
+      }
+
+      img {
+        position: absolute;
+        @include border-radius(0.400em);
+        @include box-shadow(0,0,12px,rgba(0,0,0,0.3));
+
+        &:first-of-type {
+          left: 10%;
+          margin-top: 6.500em;
+        }
+
+        &:nth-of-type(2) {
+          left: 30%;
+          margin-top: 13.500em;
+        }
+
+        &:nth-of-type(3) {
+          margin-top: 3.500em;
+          right: 10%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-width-3) {
+    header.header-article {
+      div.info {
+        img {
+          &:first-of-type {
+            left: 0;
+          }
+
+          &:nth-of-type(2) {
+            left: 15%;
+          }
+
+          &:nth-of-type(3) {
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-width-7) {
+    header.header-article {
+      padding-bottom: 25.000em;
+
+      div.info {
+        img {
+          width: 60%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-width-8) {
+    header.header-article {
+      padding-bottom: 20.000em;
+      @include background-size(contain);
+
+      div.info {
+        img {
+          @include border-radius(0);
+
+          &:first-of-type {
+            margin-top: 4.000em;
+          }
+
+          &:nth-of-type(2) {
+            margin-top: 10.000em;
+          }
+
+          &:nth-of-type(3) {
+            margin-top: 2.000em;
+          }
+        }
+      }
+    }
+  }
+}

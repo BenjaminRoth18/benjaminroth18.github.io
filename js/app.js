@@ -3,19 +3,22 @@ var br = (function ($) {
     var $html , $body;
 
     var viewports = {
-        'break0': '1600',
-        'break1': '1200',
-        'break2': '1024',
-        'break3': '1023',
-        'break4': '960',
+        'break0': '1920',
+        'break1': '1600',
+        'break2': '1200',
+        'break3': '1024',
+        'break4': '1023',
         'break5': '768',
         'break6': '767',
-        'break7': '600'
+        'break7': '600',
+        'break8': '400'
     };
 
     function initmobileMainNavigation() {
         $('nav#navigation-mobile').on('click','a.trigger-navigation-main',function() {
             $html.toggleClass('active-navigation-main');
+            $('nav#navigation-main').toggleClass('active');
+            $(this).toggleClass('triggered');
         });
     }
 
@@ -60,17 +63,6 @@ var br = (function ($) {
             };
         }
 
-        function moveFooterMain() {
-            return {
-                match: function () {
-                    $('footer#footer-main').appendTo('nav#navigation-main > div.wrapper');
-                },
-                unmatch: function () {
-                    $('footer#footer-main').appendTo($body);
-                }
-            };
-        }
-
         enquire
             .register("screen and (max-width : " + viewports.break1 + "px)", handlerFactory("screen-" + viewports.break1 + "", "default"))
             .register("screen and (max-width : " + viewports.break2 + "px)", handlerFactory("screen-" + viewports.break2 + "", "screen-" + viewports.break1 + ""))
@@ -80,8 +72,7 @@ var br = (function ($) {
             .register("screen and (max-width : " + viewports.break6 + "px)", handlerFactory("screen-" + viewports.break6 + "", "screen-" + viewports.break5 + ""))
             .register("screen and (max-width : " + viewports.break7 + "px)", handlerFactory("screen-" + viewports.break7 + "", "screen-" + viewports.break6 + ""))
             .register("screen and (min-width : " + viewports.break0 + "px)", handlerFactory("default", "screen-" + viewports.break1 + ""))
-            .register("screen and (max-width : " + viewports.break6 + "px)", removeLayers())
-            .register("screen and (max-width : " + viewports.break6 + "px)", moveFooterMain())
+            .register("screen and (max-width : " + viewports.break7 + "px)", removeLayers())
     }
 
     function initDribbbleStream() {
@@ -103,6 +94,20 @@ var br = (function ($) {
         });
     }
 
+    function initFixedHeader() {
+        var $headerHeight =  $('header#header-main').outerHeight();
+
+        $(window).scroll(function() {
+            var scrollPoint = $(window).scrollTop();
+
+            if (scrollPoint >= $headerHeight) {
+                $('header#header-main').addClass('fixed');
+            } else {
+                $("header#header-main").removeClass('fixed');
+            }
+        });
+    }
+
     $(document).ready(function () {
 
         $html = $('html');
@@ -112,6 +117,7 @@ var br = (function ($) {
         initDribbble();
         initEnquire();
         initDribbbleStream();
+        initFixedHeader();
     });
 
 }(jQuery));
