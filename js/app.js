@@ -108,6 +108,14 @@ var br = (function ($) {
         });
     }
 
+    function fadeInImages() {
+        $('img.fade').css('opacity', 0);
+
+        $('img.fade').waypoint(function() {
+            $('img.fade').css('opacity', 1);
+        }, { offset: '80%' });
+    }
+
     $(document).ready(function () {
 
         $html = $('html');
@@ -118,6 +126,7 @@ var br = (function ($) {
         initEnquire();
         initDribbbleStream();
         initFixedHeader();
+        fadeInImages();
     });
 
 }(jQuery));

@@ -141,6 +141,14 @@
   }
 }
 
+@mixin retina-2x($image,$width,$height) {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    background-image: url($image);
+    background-repeat: no-repeat;
+    background-size: $width $height;
+  }
+}
+
 @mixin wrapper($max-width: '',$width: '',$width-mobile: '') {
   margin-left: auto;
   margin-right: auto;

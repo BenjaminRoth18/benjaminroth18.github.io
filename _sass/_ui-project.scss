@@ -113,6 +113,45 @@ article.article-project {
   img {
     display: block;
     padding: 2.000em 0 2.000em 0;
+    @include transition(opacity 1s ease);
+  }
+
+  div.videos {
+    display: block;
+    justify-content: space-around;
+    text-align: center;
+
+    div.video {
+      display: inline-block;
+      margin: 3.000em;
+      position: relative;
+
+      &.iphone-7 {
+        background: url(/images/video/video-iphone-white-bg.png) 0 0 no-repeat;
+        background-size: cover;
+        height: 44.900em;
+        width: 22.450em;
+        @include retina-2x('/images/video/video-iphone-white-bg.png',22.450em,44.900em);
+
+        video {
+          height: 33.350em;
+          margin-top: 5.800em;
+          width: 18.750em;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-width-1) {
+    div.videos {
+      font-size: 0.800em;
+    }
+  }
+
+  @media screen and (max-width: $break-width-1) {
+    div.videos {
+      font-size: 0.700em;
+    }
   }
 
   @media screen and (max-width: $break-width-8) {
@@ -128,6 +167,10 @@ article.article-project {
 
     img {
       padding: 1.000em 0;
+    }
+
+    div.videos {
+      font-size: 0.300em;
     }
   }
 }
@@ -167,13 +210,8 @@ nav.navigation-pager {
   @media screen and (max-width: $break-width-8) {
     text-align: center;
 
-    p.col-left,
-    p.col-right {
-      float: none;
-
-      span {
-        display: none;
-      }
+    p {
+      font-size: 1.000em;
     }
   }
 }

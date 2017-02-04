@@ -40,6 +40,6 @@ tags:
 
 <p>It will be ready for download at the end of February 2017.</p>
 
-<img src="/images/projects/lively/lively-screen-001-small.jpg" srcset="/images/projects/lively/lively-screen-001.jpg 600w" alt="">
+<img src="/images/projects/lively/lively-screen-001-small.jpg" data-srcset="/images/projects/lively/lively-screen-001.jpg 600w" sizes="1920px" class="lazyload fade" alt="Lively dashboard">
 
 </article>
