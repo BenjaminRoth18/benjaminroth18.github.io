@@ -2,57 +2,58 @@
  * UI: ARTICLE
  */
 
-header.header-article {
-  padding: 10.000em 0 10.000em 0;
+article.article-project {
+  header {
+    padding: 10.000em 0 10.000em 0;
 
-  > div.wrapper {
-    position: relative;
-    @include wrapper($max-width-2,$width-1,$width-base);
-  }
-
-  div.info {
-    max-width: $max-width-4;
-
-    h1 {
-      font-size: 2.500em;
-      font-weight: 600;
-      line-height: 115%;
-      margin-bottom: 0.200em;
-
-      &:before {
-        background: $color-grey-8;
-        content: "";
-        display: block;
-        height: 2px;
-        margin-bottom: 1.000em;
-        width: 1.600em;
-      }
+    > div.wrapper {
+      position: relative;
+      @include wrapper($max-width-2,$width-1,$width-base);
     }
 
-    p {
-      font-size: 1.200em;
-      line-height: 145%;
-      margin-bottom: 1.000em;
-    }
+    div.info {
+      max-width: $max-width-4;
 
-    ul {
-      li {
-        display: inline-block;
-        font-size: 1.200em;
-        font-style: italic;
-        margin-bottom: 0.500em;
-        opacity: 0.6;
+      h1 {
+        font-size: 2.500em;
+        font-weight: 600;
+        line-height: 115%;
+        margin-bottom: 0.200em;
 
-        &:after {
-          content: "/";
-          display: inline-block;
-          margin: 0 0.083em 0 0.333em;
-          opacity: 0.3;
+        &:before {
+          background: $color-grey-8;
+          content: "";
+          display: block;
+          height: 2px;
+          margin-bottom: 1.000em;
+          width: 1.600em;
         }
+      }
 
-        &:last-child {
+      p {
+        font-size: 1.200em;
+        line-height: 145%;
+        margin-bottom: 1.000em;
+      }
+
+      ul {
+        li {
+          display: inline-block;
+          font-size: 1.200em;
+          margin-bottom: 0.500em;
+          opacity: 0.6;
+
           &:after {
-            display: none;
+            content: "/";
+            display: inline-block;
+            margin: 0 0.083em 0 0.333em;
+            opacity: 0.3;
+          }
+
+          &:last-child {
+            &:after {
+              display: none;
+            }
           }
         }
       }
@@ -60,158 +61,175 @@ header.header-article {
   }
 
   @media screen and (max-width: $break-width-8) {
-    padding: 5.000em 0;
+    header {
+      padding: 5.000em 0;
 
-    div.info {
-      h1 {
-        font-size: 2.000em;
+      div.info {
+        h1 {
+          font-size: 2.000em;
+        }
+
+        p {
+          font-size: 1.000em;
+        }
+
+        ul {
+          li {
+            font-size: 1.000em;
+          }
+        }
+      }
+    }
+  }
+
+  div.content-article-project {
+    padding: 2.000em 0;
+    @include wrapper($max-width-1,$width-base);
+
+    h4 {
+      font-size: 1.500em;
+      font-weight: 600;
+      margin-bottom: 0.200em;
+      @include wrapper($max-width-4);
+    }
+
+    h5 {
+      font-size: 1.200em;
+      font-weight: 600;
+      margin-bottom: 0.250em;
+      @include wrapper($max-width-4);
+    }
+
+    p {
+      font-size: 1.200em;
+      line-height: 160%;
+      margin-bottom: 1.250em;
+      @include wrapper($max-width-4);
+
+      a {
+        @include link-text($color-gold-1,$color-gold-1-8,none,none);
+      }
+    }
+
+    img {
+      display: block;
+      padding: 2.000em 0 2.000em 0;
+      @include transition(opacity 1s ease);
+    }
+
+    div.videos {
+      &.mobile {
+        display: block;
+        justify-content: space-around;
+        text-align: center;
+
+        div.video {
+          display: inline-block;
+          margin: 4.000em 3.000em;
+          position: relative;
+        }
+      }
+
+      div.video {
+        margin: 4.000em 0;
+
+        video {
+          width: 100%;
+        }
+
+        &.iphone-7 {
+          background: url(/images/video/video-iphone-white-bg.png) 0 0 no-repeat;
+          background-size: cover;
+          height: 44.900em;
+          width: 22.450em;
+          @include retina-2x('/images/video/video-iphone-white-bg.png',22.450em,44.900em);
+
+          video {
+            height: 33.350em;
+            margin-top: 5.800em;
+            width: 18.750em;
+          }
+        }
+      }
+    }
+  }
+
+  nav.navigation-pager {
+    border-top: solid 1px $color-grey-9;
+    padding-top: 1.200em;
+    @include clear();
+    @include wrapper($max-width-4,$width-base);
+
+    p {
+      display: inline-block;
+      font-size: 1.200em;
+      white-space: nowrap;
+
+      &.col-left {
+        float: left;
+
+        a {
+          @include icon(before,"\e801",0.750em,0.556em,0.111em);
+        }
+      }
+
+      &.col-right {
+        float: right;
+
+        a {
+          @include icon(after,"\e800",0.750em,0.556em,0.111em);
+        }
+      }
+
+      a {
+        @include link-text($color-gold-1,$color-gold-1-8,none,none);
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-width-1) {
+    div.content-article-project {
+      div.videos {
+        font-size: 0.800em;
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-width-1) {
+    div.content-article-project {
+      div.videos {
+        font-size: 0.700em;
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-width-8) {
+    div.content-article-project {
+      padding: 1.500em 0;
+
+      h4 {
+        font-size: 1.200em;
       }
 
       p {
         font-size: 1.000em;
       }
 
-      ul {
-        li {
-          font-size: 1.000em;
-        }
+      img {
+        padding: 1.000em 0;
       }
-    }
-  }
-}
 
-
-article.article-project {
-  padding: 2.000em 0;
-  @include wrapper($max-width-1,$width-base);
-
-  h4 {
-    font-size: 1.500em;
-    font-weight: 600;
-    margin-bottom: 0.200em;
-    @include wrapper($max-width-4);
-  }
-
-  h5 {
-    font-size: 1.200em;
-    font-weight: 600;
-    margin-bottom: 0.250em;
-    @include wrapper($max-width-4);
-  }
-
-  p {
-    font-size: 1.200em;
-    line-height: 160%;
-    margin-bottom: 1.250em;
-    @include wrapper($max-width-4);
-
-    a {
-      @include link-text($color-gold-1,$color-gold-1-8,none,none);
-    }
-  }
-
-  img {
-    display: block;
-    padding: 2.000em 0 2.000em 0;
-    @include transition(opacity 1s ease);
-  }
-
-  div.videos {
-    display: block;
-    justify-content: space-around;
-    text-align: center;
-
-    div.video {
-      display: inline-block;
-      margin: 3.000em;
-      position: relative;
-
-      &.iphone-7 {
-        background: url(/images/video/video-iphone-white-bg.png) 0 0 no-repeat;
-        background-size: cover;
-        height: 44.900em;
-        width: 22.450em;
-        @include retina-2x('/images/video/video-iphone-white-bg.png',22.450em,44.900em);
-
-        video {
-          height: 33.350em;
-          margin-top: 5.800em;
-          width: 18.750em;
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: $break-width-1) {
-    div.videos {
-      font-size: 0.800em;
-    }
-  }
-
-  @media screen and (max-width: $break-width-1) {
-    div.videos {
-      font-size: 0.700em;
-    }
-  }
-
-  @media screen and (max-width: $break-width-8) {
-    padding: 1.500em 0;
-
-    h4 {
-      font-size: 1.200em;
-    }
-
-    p {
-      font-size: 1.000em;
-    }
-
-    img {
-      padding: 1.000em 0;
-    }
-
-    div.videos {
-      font-size: 0.300em;
-    }
-  }
-}
-
-nav.navigation-pager {
-  border-top: solid 1px $color-grey-9;
-  padding-top: 1.200em;
-  @include clear();
-  @include wrapper($max-width-4,$width-base);
-
-  p {
-    display: inline-block;
-    font-size: 1.200em;
-    white-space: nowrap;
-
-    &.col-left {
-      float: left;
-
-      a {
-        @include icon(before,"\e801",0.833em,0.500em,0.100em);
+      div.videos {
+        font-size: 0.300em;
       }
     }
 
-    &.col-right {
-      float: right;
+    nav.navigation-pager {
+      text-align: center;
 
-      a {
-        @include icon(after,"\e800",0.833em,0.500em,0.100em);
+      p {
+        font-size: 1.000em;
       }
-    }
-
-    a {
-      @include link-text($color-gold-1,$color-gold-1-8,none,none);
-    }
-  }
-
-  @media screen and (max-width: $break-width-8) {
-    text-align: center;
-
-    p {
-      font-size: 1.000em;
     }
   }
 }

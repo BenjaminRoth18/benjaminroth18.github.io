@@ -5,21 +5,20 @@
 ul.list-projects {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  width: 80%;
+  width: 90%;
   @include wrapper($max-width-1);
 
   li {
     align-self: center;
-    padding: 2% 4%;
+    margin-bottom: 2.000em;
+    padding: 2% 5%;
     width: 50%;
 
     div.field-image {
-      margin-bottom: 0.500em;
+      margin-bottom: 0.800em;
     }
 
     div.field-caption {
-      max-width: 25.000em;
       text-align: left;
 
       h3 {
@@ -35,7 +34,8 @@ ul.list-projects {
 
       p {
         color: $color-grey-3;
-        line-height: 130%;
+        line-height: 140%;
+        max-width: 25.000em;
       }
     }
   }

@@ -3,7 +3,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{% if page.title %}{{ page.title | escape }} &ndash; {{ site.title }} {{ site.description }} {% else %}{{ site.title | escape }}{% endif %}</title>
+    <title>{% if page.title %}{{ page.title | escape }} &ndash; {{ site.title }}{{ site.description }}{% else %}{{ site.title | escape }} {{ site.description }}{% endif %}</title>
 
     {% if page.description || site.description %}
         <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
@@ -19,7 +19,7 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
-    <link href="https://fonts.googleapis.com/css?family=Overpass:400,400i,600,700|PT+Sans:400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass:400,400i,600,700%7CPT+Sans:400,400i" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 

@@ -58,7 +58,7 @@
 }
 
 
-@mixin icon($method,$icon,$font-size,$margin,$space-bottom: 0) {
+@mixin icon($method,$icon,$font-size,$margin,$space-bottom: '') {
   @if $method == before {
     &:before {
       bottom: $space-bottom;

@@ -393,7 +393,7 @@ section#layer-dribbble {
   @include clear();
   @include transition(margin 0.3s ease);
 
-  header {
+  div.header {
     margin-bottom: 0.500em;
     padding-top: 0.350em;
     @include clear();
