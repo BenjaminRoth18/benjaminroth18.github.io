@@ -16,6 +16,10 @@ ul.list-projects {
 
     div.field-image {
       margin-bottom: 0.800em;
+
+      img {
+        @include transition(opacity 1s ease);
+      }
     }
 
     div.field-caption {
