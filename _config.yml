@@ -28,3 +28,5 @@ paginate: 5
 
 collections:
 - home
+
+permalink: /:categories/:title

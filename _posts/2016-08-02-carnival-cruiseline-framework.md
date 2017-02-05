@@ -4,6 +4,7 @@ title:  Carnival Cruise Lines
 description: Carnival Cruise Line responsive website framework including a booking process
 description-long: Carnival is currently one of the biggest cruise line companies in the world. The project contains the new responsive websites including the booking process. Based on 7 languages.
 date: 2016-08-02 07:00:00 +0200
+category: project
 slug: project-carnival
 imageteaser: /images/projects/carnival/carnival-teaser.jpg
 imageteaser2x: /images/projects/carnival/carnival-teaser@2x.jpg
