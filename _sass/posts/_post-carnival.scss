@@ -3,7 +3,6 @@
  */
 
 body.project-carnival {
-
   div.content-smartphones {
     background-image: url(/images/projects/carnival/carnival-smartphones-bg.jpg);
     background-repeat: no-repeat;
@@ -11,7 +10,7 @@ body.project-carnival {
 
     @media screen and (max-width: $break-width-1) {
       background-image: url(/images/projects/carnival/carnival-smartphones-medium-bg.jpg);
-      height: 2400px;
+      height: 2550px;
     }
 
     @media screen and (max-width: $break-width-3) {
