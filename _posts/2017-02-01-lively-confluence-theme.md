@@ -4,7 +4,7 @@ title:  Lively
 title-long: Say hello to Lively.
 description: A Confluence dashboard theme
 description-long: Lively is a Confluence dashboard theme which helps you and your team to get a simple overview whats happening.
-date:   2016-09-19 22:10:00 +0200
+date:   2017-02-01 07:00:00 +0200
 slug: project-lively
 imageteaser: /images/projects/lively/lively-teaser.jpg
 imageteaser2x: /images/projects/lively/lively-teaser@2x.jpg

@@ -3,7 +3,7 @@ layout: project-detail
 title:  Numbers. Client dashboard.
 description: A client dashboard based on react. Developed in 24 hours.
 description-long: This project was developed on our ShipIt Days. We created a generic dashboard for one of our clients including real data charts. It was completely based on React and Webpack. We scribbled the concept and built the UX / UI from scratch. 
-date: 2016-09-19 22:10:00 +0200
+date: 2016-04-16 07:00:00 +0200
 slug: project-numbers
 imageteaser: /images/projects/numbers/numbers-teaser.jpg
 imageteaser2x: /images/projects/numbers/numbers-teaser@2x.jpg
