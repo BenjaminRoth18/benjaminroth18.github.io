@@ -27,7 +27,7 @@ header#header-main {
     }
   }
 
-  @media screen and (max-width: $break-width-8) {
+  @media screen and (max-width: $break-width-7) {
     padding: 0;
 
     &.fixed {
@@ -161,7 +161,7 @@ nav#navigation-main {
     margin-top: 0.600em;
   }
 
-  @media screen and (max-width: $break-width-8) {
+  @media screen and (max-width: $break-width-7) {
     float: none;
     margin-top: 0;
     position: absolute;
@@ -224,7 +224,7 @@ nav#navigation-main {
 
     ul {
       display: block;
-      margin: 0.600em 0 1.000em 0;
+      margin: 0.600em 0 2.000em 0;
       text-align: center;
 
       li {
@@ -234,7 +234,7 @@ nav#navigation-main {
       &.list-pages {
         li {
           display: block;
-          margin: 0.600em;
+          margin: 1.000em 0;
           @include last-child($margin-bottom: true);
         }
       }
@@ -311,7 +311,7 @@ nav#navigation-mobile {
     }
   }
 
-  @media screen and (max-width: $break-width-8) {
+  @media screen and (max-width: $break-width-7) {
     display: block;
   }
 }
@@ -353,7 +353,7 @@ footer#footer-main {
     }
   }
 
-  @media screen and (max-width: $break-width-8) {
+  @media screen and (max-width: $break-width-7) {
     border-top: solid 1px $color-grey-9;
     margin-top: 2.000em;
     padding-top: 1.200em;
@@ -512,7 +512,7 @@ section#layer-dribbble {
     margin-right: 0;
   }
 
-  @media screen and (max-width: $break-width-8) {
+  @media screen and (max-width: $break-width-7) {
     section#layer-dribbble {
       max-width: none;
       padding-bottom: 4.000em;

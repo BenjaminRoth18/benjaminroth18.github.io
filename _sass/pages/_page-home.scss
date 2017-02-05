@@ -44,6 +44,10 @@ div#content-home {
         line-height: 160%;
         margin-bottom: 1.000em;
         max-width: 32.000em;
+
+        a {
+          @include link-text($color-gold-1,$color-gold-1-8,none,none);
+        }
       }
 
       img {
