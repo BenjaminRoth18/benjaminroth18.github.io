@@ -19,12 +19,12 @@ twitter: https://twitter.com/BennyRoth
 # Build settings
 markdown: kramdown
 
+sass:
+  style: compressed
+
 gems: [jekyll-paginate]
 
 paginate: 5
 
 collections:
- home:
- projects:
-  output: true
-  permalink: /:collection/:path/
+- home
