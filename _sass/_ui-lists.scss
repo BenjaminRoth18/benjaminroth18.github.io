@@ -15,10 +15,18 @@ ul.list-projects {
     width: 50%;
 
     div.field-image {
-      margin-bottom: 0.800em;
+      margin-bottom: 0.600em;
 
-      img {
+      a {
         @include transition(opacity 1s ease);
+
+        img {
+          @include transition(opacity 1s ease);
+        }
+
+        &:hover {
+          opacity: 0.75;
+        }
       }
     }
 
@@ -29,7 +37,7 @@ ul.list-projects {
         font-size: 1.500em;
         font-weight: 600;
         line-height: 115%;
-        margin-bottom: 0.267em;
+        margin-bottom: 0.200em;
 
         a {
           @include link-text($color-black,$color-gold-1,none,none);
@@ -37,10 +45,22 @@ ul.list-projects {
       }
 
       p {
-        color: $color-grey-3;
-        line-height: 140%;
+        color: $color-grey-4;
+        line-height: 130%;
         max-width: 25.000em;
       }
+    }
+  }
+
+  @media screen and (max-width: $break-width-1) {
+    li {
+      padding: 2% 8%;
+    }
+  }
+
+  @media screen and (max-width: $break-width-2) {
+    li {
+      padding: 2% 5%;
     }
   }
 

@@ -3,7 +3,7 @@
  */
 
 article.article-project {
-  header {
+  header.header-article {
     padding: 10.000em 0 8.000em 0;
 
     > div.wrapper {
@@ -61,8 +61,8 @@ article.article-project {
   }
 
   @media screen and (max-width: $break-width-8) {
-    header {
-      padding: 5.000em 0 2.000em 0;
+    header.header-article {
+      padding: 5.000em 0 3.000em 0;
 
       div.info {
         h1 {
@@ -115,6 +115,10 @@ article.article-project {
       display: block;
       padding: 2.000em 0 2.000em 0;
       @include transition(opacity 1s ease);
+
+      &.center {
+        margin: 0 auto;
+      }
     }
 
     div.videos {
