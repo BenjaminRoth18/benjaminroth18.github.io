@@ -9,14 +9,14 @@ permalink: /projects/
         {% for post in site.posts %}
             <li>
                 <div class="field-image">
-                    <a href="{{ post.url }}" title="{{ post.title }}">
+                    <a href="{{ post.url }}">
                         <img src="{{ post.imageteaser }}" srcset="{{ post.imageteaser }} 1x, {{ post.imageteaser2x }} 2x" class="lazyload fade" alt="{{ post.title }}">
                     </a>
                 </div>
 
                 <div class="field-caption">
                     <h3>
-                        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                        <a href="{{ post.url }}">{{ post.title }}</a>
                     </h3>
                     <p>
                         {{ post.description }}
