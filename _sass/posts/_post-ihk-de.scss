@@ -41,10 +41,10 @@ body.project-ihk-de {
       @include background-size(100% auto);
 
       &:before {
-        display: block;
         content: "";
-        width: 100%;
+        display: block;
         padding-top: 50%;
+        width: 100%;
       }
     }
   }

@@ -23,6 +23,7 @@ body.project-lively {
       h1 {
         &:before {
           background: $color-white;
+          opacity: 0.5;
         }
       }
 
@@ -47,6 +48,15 @@ body.project-lively {
         }
       }
     }
+  }
+
+  div.content-widgets {
+    background: url(/images/projects/lively/lively-widgets-bg.svg) 50% 50% no-repeat;
+    margin: 5% 0 8% 0;
+    text-align: center;
+    @include background-size(contain);
+
+
   }
 
   @media screen and (max-width: $break-width-3) {
@@ -95,7 +105,7 @@ body.project-lively {
           }
 
           &:nth-of-type(2) {
-            margin-top: 11.000em;
+            margin-top: 10.500em;
           }
 
           &:nth-of-type(3) {
