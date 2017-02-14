@@ -66,6 +66,16 @@ ul.list-projects {
     }
   }
 
+  @media screen and (max-width: $break-width-6) {
+    li {
+      div.field-caption {
+        h3 {
+          font-size: 1.200em;
+        }
+      }
+    }
+  }
+
   @media screen and (max-width: $break-width-8) {
     display: block;
     width: $width-base;
