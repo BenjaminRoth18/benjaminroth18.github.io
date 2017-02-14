@@ -34,7 +34,6 @@ body.project-carnival {
   @media screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: $break-width-8) {
     div.content-smartphones {
       background-image: url(/images/projects/carnival/carnival-smartphones-medium-bg.jpg);
-      border: solid 1px red;
     }
   }
 
@@ -42,7 +41,6 @@ body.project-carnival {
     div.content-smartphones {
       background-image: url(/images/projects/carnival/carnival-smartphones-bg@2x.jpg);
       @include background-size(cover);
-      border: solid 1px green;
     }
   }
 }
