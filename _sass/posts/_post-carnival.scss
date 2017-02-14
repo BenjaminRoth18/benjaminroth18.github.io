@@ -27,10 +27,17 @@ body.project-carnival {
     div.content-smartphones {
       background-image: url(/images/projects/carnival/carnival-smartphones-xsmall-bg.jpg);
       height: 1200px;
+      @include background-size(cover);
     }
   }
 
-  @media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
+  @media screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: $break-width-8) {
+    div.content-smartphones {
+      background-image: url(/images/projects/carnival/carnival-smartphones-medium-bg.jpg);
+    }
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: $break-width-8) {
     div.content-smartphones {
       background-image: url(/images/projects/carnival/carnival-smartphones-bg@2x.jpg);
       @include background-size(cover);
