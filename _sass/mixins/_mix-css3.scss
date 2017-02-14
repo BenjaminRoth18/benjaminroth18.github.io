@@ -1,0 +1,75 @@
+/**
+ * MIXINS: CSS3
+ */
+
+@mixin keyframes($animation) {
+  @keyframes #{$animation} {
+    @content;
+  }
+
+  @-o-keyframes #{$animation} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animation} {
+    @content;
+  }
+
+  @-ms-keyframes #{$animation} {
+    @content;
+  }
+
+  @-webkit-keyframes #{$animation} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  animation: #{$str};
+  -o-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -webkit-animation: #{$str};
+}
+
+@mixin background-size($value) {
+  background-size: $value;
+  -moz-background-size: $value;
+  -o-background-size: $value;
+  -webkit-background-size: $value;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+  box-shadow:$top $left $blur $color #{$inset};
+  -moz-box-shadow:$top $left $blur $color #{$inset};
+  -webkit-box-shadow:$top $left $blur $color #{$inset};
+}
+
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model;
+  -moz-box-sizing: $box-model;
+  box-sizing: $box-model;
+}
+
+@mixin gradient($start-color, $end-color, $orientation) {
+  background: $start-color;
+
+  @if $orientation == 'vertical' {
+    background: -webkit-linear-gradient(top, $start-color, $end-color);
+    background: linear-gradient(to top, $start-color, $end-color);
+  }
+}
+
+@mixin transition($transition...) {
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+

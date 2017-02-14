@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body class="{% if page.class %}{{ page.class }}{% endif %}">
+
+    {% include header.html %}
+
+    <main>
+      <article class="article-project">
+        <header class="header-article">
+          <div class="wrapper">
+            <div class="info">
+              <h1>
+                {% if page.title-long %}
+
+                  {{ page.title-long }}
+
+                {% else %}
+
+                  {{ page.title }}
+
+                {% endif %}
+              </h1>
+              <p>
+                {{ page.description-long }}
+              </p>
+
+              <ul>
+                {% for tags in page.tags %}
+                <li>{{ tags }}</li>
+                {% endfor %}
+              </ul>
+
+              {% if page.image-header-1 %} <img src="{{ page.image-header-1 }}" srcset="{{ page.image-header-1 }} 1x, {{ page.image-header-1-2x }} 2x" alt="{{ page.title-long }}"> {% endif %}
+              {% if page.image-header-2 %} <img src="{{ page.image-header-2 }}" srcset="{{ page.image-header-2 }} 1x, {{ page.image-header-2-2x }} 2x" alt="{{ page.title-long }}"> {% endif %}
+              {% if page.image-header-3 %} <img src="{{ page.image-header-3 }}" srcset="{{ page.image-header-3 }} 1x, {{ page.image-header-3-2x }} 2x" alt="{{ page.title-long }}"> {% endif %}
+
+            </div>
+          </div>
+        </header>
+
+        {{ content }}
+
+        <nav class="navigation-pager">
+
+          {% if page.previous.url %}
+          <p class="col-left">
+            <a href="{{page.previous.url}}"><span>Previous project</span></a>
+          </p>
+          {% endif %}
+
+          {% if page.next.url %}
+          <p class="col-right">
+            <a href="{{page.next.url}}"><span>Next project</span></a>
+          </p>
+          {% endif %}
+
+        </nav>
+      </article>
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

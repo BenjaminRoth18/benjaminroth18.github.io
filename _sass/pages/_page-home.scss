@@ -1,0 +1,96 @@
+/**
+ * PAGES: HOME
+ */
+
+div#content-home {
+  padding: 7.500em 0 2.000em 0;
+
+  article {
+    header {
+      width: $width-base;
+      @include wrapper($max-width-base);
+
+      &:after {
+        background: $color-grey-8;
+        content: "";
+        display: block;
+        height: 2px;
+        margin: 2.000em 0;
+        width: 4.000em;
+      }
+
+      h1 {
+        font-size: 2.000em;
+        font-weight: 600;
+        margin-bottom: 0.300em;
+        max-width: 18.750em;
+      }
+
+      p {
+        color: $color-grey-6;
+
+        a {
+          @include link-text($color-gold-1,$color-gold-1-8,none,none);
+        }
+      }
+    }
+
+    div.content {
+      width: $width-base;
+      @include clear();
+      @include wrapper($max-width-base);
+
+      p {
+        line-height: 160%;
+        margin-bottom: 1.000em;
+        max-width: 32.000em;
+
+        a {
+          @include link-text($color-gold-1,$color-gold-1-8,none,none);
+        }
+      }
+
+      img {
+        display: inline-block;
+        float: right;
+        margin: 0 0 1.000em 1.500em;
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-width-5) {
+    article {
+      div.content {
+        img {
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-width-8) {
+    padding: 3.000em 0 0 0;
+
+    article {
+      header {
+        h1 {
+          font-size: 1.600em;
+        }
+      }
+
+      div.content {
+        width: 100%;
+
+        img {
+          float: none;
+          margin: 0.200em 0 1.200em 0;
+          width: 100%;
+        }
+
+        > *:not(img) {
+          padding: 0 4%;
+        }
+      }
+    }
+  }
+}

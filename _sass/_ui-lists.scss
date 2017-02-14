@@ -1,0 +1,89 @@
+/**
+ * UI: LISTS: PROJECTS
+ */
+
+ul.list-projects {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  @include wrapper($max-width-1);
+
+  li {
+    align-self: center;
+    margin-bottom: 4.000em;
+    padding: 2% 5%;
+    width: 50%;
+
+    div.field-image {
+      margin-bottom: 0.800em;
+
+      a {
+        display: block;
+        opacity: 1;
+        @include transition(opacity 0.5s ease);
+
+        &:hover {
+          opacity: 0.75;
+        }
+
+        img {
+          display: block;
+        }
+      }
+    }
+
+    div.field-caption {
+      text-align: left;
+
+      h3 {
+        font-size: 1.500em;
+        font-weight: 600;
+        line-height: 115%;
+        margin-bottom: 0.200em;
+
+        a {
+          @include link-text($color-black,$color-gold-1,none,none);
+        }
+      }
+
+      p {
+        color: $color-grey-4;
+        line-height: 130%;
+        max-width: 25.000em;
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-width-1) {
+    li {
+      padding: 2% 8%;
+    }
+  }
+
+  @media screen and (max-width: $break-width-2) {
+    li {
+      padding: 2% 5%;
+    }
+  }
+
+  @media screen and (max-width: $break-width-6) {
+    li {
+      div.field-caption {
+        h3 {
+          font-size: 1.200em;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-width-8) {
+    display: block;
+    width: $width-base;
+
+    li {
+      margin-bottom: 3.000em;
+      padding: 0;
+      width: 100%;
+    }
+  }
+}

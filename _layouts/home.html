@@ -3,13 +3,15 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="page-home">
 
     {% include header.html %}
 
     {% for page in site.home %}
 
-      {{ page.content }}
+      <main>
+        {{ page.content }}
+      </main>
 
     {% endfor %}
 

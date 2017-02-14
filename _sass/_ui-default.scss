@@ -1,0 +1,30 @@
+/**
+ * UI: DEFAULT
+ */
+
+* {
+  @include box-sizing(border-box);
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.250em;
+  -webkit-font-smoothing: antialiased;
+
+  @media screen and (max-width: $break-width-4) {
+    font-size: 1.125em;
+  }
+}
+
+a {
+  @include transition(color 0.3s ease,background-color 0.3s ease);
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Overpass', sans-serif;
+  line-height: 130%;
+}
