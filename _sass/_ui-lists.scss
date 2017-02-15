@@ -9,7 +9,6 @@ ul.list-projects {
   @include wrapper($max-width-1);
 
   li {
-    align-self: center;
     margin-bottom: 4.000em;
     padding: 2% 5%;
     width: 50%;
@@ -56,7 +55,7 @@ ul.list-projects {
 
   @media screen and (max-width: $break-width-1) {
     li {
-      padding: 2% 8%;
+      padding: 2% 6%;
     }
   }
 
