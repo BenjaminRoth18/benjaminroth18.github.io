@@ -33,29 +33,30 @@ body.project-ihk-de {
     }
   }
 
-  @media screen and (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
+  @media screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: $break-width-8) {
+    div.content-devices {
+      background-position: 50% 0;
+      background-image: url(/images/projects/ihk-de/ihk-de-devices-medium-bg.jpg);
+      @include background-size(cover);
+
+      &:before {
+        padding-top: 70%;
+      }
+    }
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: $break-width-8) {
     div.content-devices {
       background-image: url(/images/projects/ihk-de/ihk-de-devices-bg@2x.jpg);
       background-position: 0 0;
       height: auto;
-      @include background-size(100% auto);
+      @include background-size(cover);
 
       &:before {
         content: "";
         display: block;
         padding-top: 50%;
         width: 100%;
-      }
-    }
-  }
-
-  @media screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: $break-width-8) {
-    div.content-devices {
-      background-position: 50% 0;
-      @include background-size(140% auto);
-
-      &:before {
-        padding-top: 70%;
       }
     }
   }
