@@ -138,8 +138,10 @@ article.article-project {
       div.video {
         margin: 4.000em 0;
 
-        video {
-          width: 100%;
+        &.full {
+          video {
+            width: 100%;
+          }
         }
 
         &.iphone-7 {
