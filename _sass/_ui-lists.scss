@@ -26,6 +26,7 @@ ul.list-projects {
 
         img {
           display: block;
+          @include transition(opacity 1s ease);
         }
       }
     }
