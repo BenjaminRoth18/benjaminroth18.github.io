@@ -27,6 +27,14 @@
                 {{ page.description-long }}
               </p>
 
+              {% if page.description-long-additional %}
+
+                <p>
+                  {{ page.description-long-additional }}
+                </p>
+
+              {% endif %}
+
               <ul>
                 {% for tags in page.tags %}
                 <li>{{ tags }}</li>

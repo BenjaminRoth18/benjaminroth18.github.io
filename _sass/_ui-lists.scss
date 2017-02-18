@@ -5,8 +5,7 @@
 ul.list-projects {
   display: flex;
   flex-wrap: wrap;
-  width: 90%;
-  @include wrapper($max-width-1);
+  @include wrapper($max-width-1,$width-base,$width-auto);
 
   li {
     margin-bottom: 4.000em;
@@ -77,12 +76,15 @@ ul.list-projects {
 
   @media screen and (max-width: $break-width-8) {
     display: block;
-    width: $width-base;
 
     li {
-      margin-bottom: 3.000em;
+      margin-bottom: 4.000em;
       padding: 0;
       width: 100%;
+
+      div.field-caption {
+        padding: 0 1.000em;
+      }
     }
   }
 }
