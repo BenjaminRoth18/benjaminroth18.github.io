@@ -4,4 +4,8 @@
 
 div#content-projects-overview {
   padding: 2.000em 0;
+
+  @media screen and (max-width: $break-width-8) {
+    padding: 1.000em 0;
+  }
 }

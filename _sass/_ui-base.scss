@@ -9,7 +9,6 @@ header#header-main {
   div.logo {
     float: left;
     line-height: 125%;
-    -webkit-font-smoothing: antialiased;
 
     a {
       display: block;
@@ -30,15 +29,9 @@ header#header-main {
   @media screen and (max-width: $break-width-7) {
     padding: 0;
 
-    &.fixed {
-      //background: rgba(255,255,255,0.96);
-      //position: fixed;
-      //width: 100%;
-      //z-index: 200;
-    }
-
     div.logo {
       float: none;
+      padding-top: 0.400em;
       position: relative;
 
       a {
@@ -46,7 +39,7 @@ header#header-main {
 
         svg {
           margin: 0 auto;
-          width: 1.500em;
+          width: 1.800em;
         }
       }
     }
