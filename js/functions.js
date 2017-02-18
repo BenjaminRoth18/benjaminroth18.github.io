@@ -112,8 +112,11 @@ var br = (function ($) {
         $('img.fade').css('opacity', 0);
 
         $('img.fade').waypoint(function() {
-            $('img.fade').css('opacity', 1);
-        }, { offset: '80%' });
+            $(this.element).css('opacity', 1);
+        },
+        {
+            offset: '80%'
+        });
     }
 
     $(document).ready(function () {
