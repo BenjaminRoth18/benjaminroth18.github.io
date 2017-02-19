@@ -85,7 +85,7 @@ var br = (function ($) {
                 var date_created = $.format.date(shot.created_at, "d.MMMM yyyy");
 
                 html.push('<li>');
-                html.push('<div class="field-image"><a href="' + shot.html_url + '" target="_blank" title="'+shot.title+'"><img src="' + shot.images.normal + '"></a></div>');
+                html.push('<div class="field-image"><a href="' + shot.html_url + '" target="_blank" title="'+shot.title+'"><img src="' + shot.images.teaser + '"></a></div>');
                 html.push('<div class="field-description"><h6><a href="' + shot.html_url + '" target="_blank" title="'+shot.title+'">'+shot.title+'</a></h6><p>' + date_created + '</p></div>');
                 html.push('</li>');
             });
