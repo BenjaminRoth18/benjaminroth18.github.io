@@ -30,20 +30,7 @@ article.article-project {
           color: $color-grey-4;
           font-style: italic;
           margin-bottom: 1.500em;
-          padding-left: 0.750em;
           position: relative;
-
-          &:after {
-            background: $color-grey-9;
-            content: "";
-            display: block;
-            height: 100%;
-            left: 0;
-            position: absolute;
-            top: 0;
-            width: 3px;
-            @include border-radius(36px);
-          }
         }
       }
 
