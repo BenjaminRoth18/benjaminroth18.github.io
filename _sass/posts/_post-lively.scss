@@ -76,7 +76,7 @@ body.project-lively {
 
       div.info {
         img {
-          width: 60%;
+          width: 70%;
         }
       }
     }
@@ -92,15 +92,15 @@ body.project-lively {
           @include border-radius(0.150em);
 
           &:first-of-type {
-            margin-top: 6.500em;
+            margin-top: 5.500em;
           }
 
           &:nth-of-type(2) {
-            margin-top: 11.500em;
+            margin-top: 10.500em;
           }
 
           &:nth-of-type(3) {
-            margin-top: 3.500em;
+            margin-top: 2.500em;
           }
         }
       }
@@ -109,7 +109,7 @@ body.project-lively {
 
   @media screen and (max-width: $break-width-9) {
     header.header-article {
-      padding-bottom: 18.000em;
+      padding-bottom: 19.000em;
     }
   }
 }
