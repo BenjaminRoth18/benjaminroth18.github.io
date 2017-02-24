@@ -36,11 +36,10 @@ article.article-project {
 
       ul {
         li {
-          color: $color-black;
           display: inline-block;
           font-size: 1.200em;
           margin-bottom: 0.500em;
-          opacity: 0.6;
+          opacity: 0.65;
 
           &:after {
             content: "/";
