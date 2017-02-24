@@ -4,7 +4,7 @@
 
 article.article-project {
   header.header-article {
-    padding: 10.000em 0 8.000em 0;
+    padding: 12.000em 0 8.000em 0;
 
     > div.wrapper {
       position: relative;
@@ -36,6 +36,7 @@ article.article-project {
 
       ul {
         li {
+          color: $color-black;
           display: inline-block;
           font-size: 1.200em;
           margin-bottom: 0.500em;
@@ -57,6 +58,13 @@ article.article-project {
       }
     }
   }
+
+  @media screen and (max-width: $break-width-1) {
+    header.header-article {
+      padding: 11.000em 0 8.000em 0;
+    }
+  }
+
 
   @media screen and (max-width: $break-width-8) {
     header.header-article {
