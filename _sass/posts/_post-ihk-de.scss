@@ -21,7 +21,7 @@ body.project-ihk-de {
   @media screen and (max-width: $break-width-3) {
     div.content-devices {
       background-image: url(/images/projects/ihk-de/ihk-de-devices-small-bg.jpg);
-      height: 550px;
+      height: 600px;
     }
   }
 
@@ -29,7 +29,7 @@ body.project-ihk-de {
     div.content-devices {
       background-image: url(/images/projects/ihk-de/ihk-de-devices-xsmall-bg.jpg);
       height: 350px;
-      margin-bottom: 2.000em;
+      margin-bottom: 0;
     }
   }
 
@@ -48,7 +48,6 @@ body.project-ihk-de {
   @media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: $break-width-8) {
     div.content-devices {
       background-image: url(/images/projects/ihk-de/ihk-de-devices-bg@2x.jpg);
-      background-position: 0 0;
       height: auto;
       @include background-size(cover);
 
