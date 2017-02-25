@@ -52,19 +52,28 @@
         {{ content }}
 
         <nav class="navigation-pager">
+          <div class="wrapper">
+            {% if page.next.url %}
+                <p>
+                  <a href="{{page.next.url}}">Next</a>
+                </p>
 
-          {% if page.previous.url %}
-          <p class="col-left">
-            <a href="{{page.previous.url}}"><span>Previous project</span></a>
-          </p>
-          {% endif %}
+                <h4>
+                  <a href="{{page.next.url}}">{{page.next.title}}</a>
+                </h4>
 
-          {% if page.next.url %}
-          <p class="col-right">
-            <a href="{{page.next.url}}"><span>Next project</span></a>
-          </p>
-          {% endif %}
+            {% else %}
 
+              <p>
+                <a href="{{page.next.url}}">The end</a>
+              </p>
+
+              <h4>
+                <a href="/projects/">Show all work</a>
+              </h4>
+
+            {% endif %}
+          </div>
         </nav>
       </article>
     </main>

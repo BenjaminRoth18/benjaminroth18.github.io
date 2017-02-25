@@ -60,7 +60,7 @@ article.article-project {
 
   @media screen and (max-width: $break-width-1) {
     header.header-article {
-      padding: 11.000em 0 8.000em 0;
+      padding: 11.000em 0 6.000em 0;
     }
   }
 
@@ -168,30 +168,31 @@ article.article-project {
 
   nav.navigation-pager {
     border-top: solid 1px $color-grey-9;
-    padding-top: 1.200em;
-    @include clear();
-    @include wrapper($max-width-4,$width-base);
+    padding: 2.000em 0 1.000em 0;
+    text-align: center;
+
+    > div.wrapper {
+      @include wrapper($max-width-4,$width-base);
+    }
+
+    div {
+      display: inline-block;
+    }
 
     p {
       display: inline-block;
       font-size: 1.200em;
+      margin-bottom: 1.000em;
       white-space: nowrap;
 
-      &.col-left {
-        float: left;
-
-        a {
-          @include icon(before,"\e801",0.750em,0.556em,0.111em);
-        }
+      a {
+        @include link-text($color-grey-5,$color-grey-6,none,none);
       }
+    }
 
-      &.col-right {
-        float: right;
-
-        a {
-          @include icon(after,"\e800",0.750em,0.556em,0.111em);
-        }
-      }
+    h4 {
+      font-size: 1.500em;
+      line-height: 120%;
 
       a {
         @include link-text($color-gold-1,$color-gold-1-8,none,none);
@@ -233,14 +234,6 @@ article.article-project {
 
       div.videos {
         font-size: 0.300em;
-      }
-    }
-
-    nav.navigation-pager {
-      text-align: center;
-
-      p {
-        font-size: 1.000em;
       }
     }
   }
