@@ -13,7 +13,7 @@ ul.list-projects {
     width: 50%;
 
     div.field-image {
-      margin-bottom: 0.800em;
+      margin-bottom: 1.000em;
 
       a {
         display: block;
@@ -35,7 +35,7 @@ ul.list-projects {
       text-align: left;
 
       h3 {
-        font-size: 1.500em;
+        font-size: 1.700em;
         font-weight: 600;
         line-height: 115%;
         margin-bottom: 0.200em;
@@ -61,6 +61,22 @@ ul.list-projects {
   @media screen and (max-width: $break-width-2) {
     li {
       padding: 2% 5%;
+
+      div.field-caption {
+        h3 {
+          font-size: 1.500em;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-width-3) {
+    li {
+      div.field-caption {
+        h3 {
+          font-size: 1.400em;
+        }
+      }
     }
   }
 
@@ -78,7 +94,7 @@ ul.list-projects {
     display: block;
 
     li {
-      margin-bottom: 4.000em;
+      margin-bottom: 5.000em;
       padding: 0;
       width: 100%;
 
