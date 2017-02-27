@@ -90,27 +90,26 @@ article.article-project {
 
   div.content-article-project {
     padding: 2.000em 0;
-    @include wrapper($max-width-1,$width-base);
 
     h4 {
       font-size: 1.500em;
       font-weight: 600;
       margin-bottom: 0.200em;
-      @include wrapper($max-width-4);
+      @include wrapper($max-width-4,$width-base);
     }
 
     h5 {
       font-size: 1.200em;
       font-weight: 600;
       margin-bottom: 0.250em;
-      @include wrapper($max-width-4);
+      @include wrapper($max-width-4,$width-base);
     }
 
     p {
       font-size: 1.200em;
       line-height: 160%;
       margin-bottom: 1.250em;
-      @include wrapper($max-width-4);
+      @include wrapper($max-width-4,$width-base);
 
       a {
         @include link-text($color-gold-1,$color-gold-1-8,none,none);
@@ -125,9 +124,15 @@ article.article-project {
       &.center {
         margin: 0 auto;
       }
+
+      &.space {
+        @include wrapper($max-width-1,$width-base);
+      }
     }
 
     div.videos {
+      @include wrapper($max-width-1,$width-base);
+
       &.mobile {
         display: block;
         justify-content: space-around;
