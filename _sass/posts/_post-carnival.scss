@@ -9,6 +9,15 @@ body.project-carnival {
     height: 3400px;
   }
 
+  div.content-navigation-mobile-001 {
+    margin: 5.000em 0;
+    padding: 3% 0;
+
+    h1 {
+      @include wrapper($max-width-3,$width-base);
+    }
+  }
+
   @media screen and (max-width: $break-width-1) {
     div.content-smartphones {
       background-image: url(/images/projects/carnival/carnival-smartphones-medium-bg.jpg);
@@ -28,6 +37,14 @@ body.project-carnival {
       background-image: url(/images/projects/carnival/carnival-smartphones-xsmall-bg.jpg);
       height: 1200px;
       @include background-size(cover);
+    }
+
+    div.content-navigation-mobile-001 {
+      h1 {
+        span {
+          display: block;
+        }
+      }
     }
   }
 

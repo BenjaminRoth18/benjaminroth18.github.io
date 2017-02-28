@@ -91,6 +91,13 @@ article.article-project {
   div.content-article-project {
     padding: 2.000em 0;
 
+    h1 {
+      font-size: 2.500em;
+      font-weight: 600;
+      line-height: 125%;
+      margin-bottom: 0.720em;
+    }
+
     h4 {
       font-size: 1.500em;
       font-weight: 600;
@@ -114,6 +121,10 @@ article.article-project {
       a {
         @include link-text($color-gold-1,$color-gold-1-8,none,none);
       }
+    }
+
+    .center {
+      text-align: center;
     }
 
     img {
@@ -224,6 +235,10 @@ article.article-project {
   @media screen and (max-width: $break-width-8) {
     div.content-article-project {
       padding: 1.500em 0;
+
+      h1 {
+        font-size: 1.800em;
+      }
 
       h4 {
         font-size: 1.200em;
