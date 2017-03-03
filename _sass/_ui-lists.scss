@@ -5,12 +5,18 @@
 ul.list-projects {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   @include wrapper($max-width-1,$width-base,$width-auto);
 
   li {
     margin-bottom: 4.000em;
     padding: 2% 5%;
+    text-align: center;
     width: 50%;
+
+    > div.wrapper {
+      display: inline-block;
+    }
 
     div.field-image {
       margin-bottom: 1.000em;
@@ -46,22 +52,14 @@ ul.list-projects {
       }
 
       h6 {
-        color: $color-grey-4;
+        color: $color-grey-5;
         line-height: 130%;
       }
     }
   }
 
-  @media screen and (max-width: $break-width-1) {
-    li {
-      padding: 2% 6%;
-    }
-  }
-
   @media screen and (max-width: $break-width-2) {
     li {
-      padding: 2% 5%;
-
       div.field-caption {
         h3 {
           font-size: 1.500em;
