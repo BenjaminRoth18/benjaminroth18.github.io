@@ -127,17 +127,19 @@ article.article-project {
       text-align: center;
     }
 
-    img {
-      display: block;
-      padding: 2.000em 0 2.000em 0;
-      @include transition(opacity 1s ease);
-
-      &.center {
-        margin: 0 auto;
-      }
-
+    div.image {
       &.space {
         @include wrapper($max-width-1,$width-base);
+      }
+
+      img {
+        display: block;
+        padding: 2.000em 0 2.000em 0;
+        @include transition(opacity 1s ease);
+
+        &.center {
+          margin: 0 auto;
+        }
       }
     }
 
@@ -248,8 +250,10 @@ article.article-project {
         font-size: 1.000em;
       }
 
-      img {
-        padding: 1.000em 0;
+      div.image {
+        img {
+          padding: 1.000em 0;
+        }
       }
 
       div.videos {
