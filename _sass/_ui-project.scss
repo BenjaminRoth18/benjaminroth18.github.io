@@ -91,11 +91,12 @@ article.article-project {
   div.content-article-project {
     padding: 3.000em 0;
 
-    h1 {
-      font-size: 2.500em;
+    h3 {
+      font-size: 1.800em;
       font-weight: 600;
-      line-height: 125%;
-      margin-bottom: 0.720em;
+      line-height: 120%;
+      margin-bottom: 0.167em;
+      @include wrapper($max-width-4,$width-base);
     }
 
     h4 {
@@ -131,7 +132,7 @@ article.article-project {
       padding: 3.000em 0;
 
       &.space {
-        @include wrapper($max-width-1,$width-base);
+        @include wrapper($max-width-1,$width-base,$width-auto);
       }
 
       img {
@@ -145,7 +146,7 @@ article.article-project {
     }
 
     div.videos {
-      @include wrapper($max-width-1,$width-base);
+      @include wrapper($max-width-1,$width-base,$width-auto);
 
       &.mobile {
         display: block;
@@ -168,6 +169,12 @@ article.article-project {
           }
         }
 
+        &.wrapped {
+          video {
+            max-width: 100%;
+          }
+        }
+
         &.iphone-7 {
           background: url(/images/video/video-iphone-white-bg.png) 0 0 no-repeat;
           background-size: cover;
@@ -186,7 +193,6 @@ article.article-project {
   }
 
   nav.navigation-pager {
-    border-top: solid 1px $color-grey-9;
     padding: 2.000em 0 1.000em 0;
     text-align: center;
 
@@ -237,10 +243,10 @@ article.article-project {
 
   @media screen and (max-width: $break-width-8) {
     div.content-article-project {
-      padding: 1.800em 0;
+      padding: 2.000em 0;
 
-      h1 {
-        font-size: 1.800em;
+      h3 {
+        font-size: 1.300em;
       }
 
       h4 {
@@ -249,6 +255,10 @@ article.article-project {
 
       p {
         font-size: 1.000em;
+      }
+
+      .space-bottom-large {
+        padding-bottom: 5.000em !important;
       }
 
       div.image {
