@@ -60,7 +60,7 @@ body.project-lively {
       padding: 15.000em 8.000em;
 
       video {
-        @include box-shadow(0,0,24px,0,rgba(0,0,0,0.1));
+        @include box-shadow(0,0,1.200em,0,rgba(0,0,0,0.1));
       }
     }
   }
