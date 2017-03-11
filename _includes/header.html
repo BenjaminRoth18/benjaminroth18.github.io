@@ -1,5 +1,4 @@
 <header id="header-main">
-
     <div class="logo">
         <a href="{{ site.baseurl }}/" title="{{ site.title }}">{% include svg/img-icon-logo.svg %}</a>
     </div>
@@ -47,13 +46,37 @@
     <nav id="navigation-mobile">
         <ul>
             <li class="item-navigation-main">
-                <a href="#" class="trigger-navigation-main" title="">
+                <a href="#" class="trigger-navigation-main">
                     <span></span>
                     <span></span>
                     <span></span>
                 </a>
             </li>
         </ul>
+    </nav>
+
+    <nav id="navigation-fast">
+
+        {% if page.layout == 'project-detail' %}
+            <a href="/projects" class="trigger-home">
+                <span></span>
+                <span></span>
+            </a>
+
+        {% else %}
+
+            <a href="/" class="trigger-home">
+                <span></span>
+                <span></span>
+            </a>
+
+        {% endif %}
+
+        <a href="#" class="trigger-navigation-main">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
     </nav>
 
     <section id="layer-dribbble">

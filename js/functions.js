@@ -22,6 +22,54 @@ var br = (function ($) {
         });
     }
 
+    function initNavigationFast() {
+        var initialPosition = 0;
+        const $navigationFast = $('nav#navigation-fast');
+        const $navigationFastHeight = $navigationFast.outerHeight();
+
+        $navigationFast.css('margin-top',-$navigationFastHeight);
+
+        $(window).scroll(function(){
+            const scrollTopCurrent = $(this).scrollTop();
+            const $headerHeight =  $('header#header-main').outerHeight()*10;
+
+            if (scrollTopCurrent > initialPosition){
+                if ($navigationFast.hasClass('active')) {
+                    $navigationFast.removeClass('active');
+                    $navigationFast.css('margin-top',-$navigationFastHeight);
+                }
+            } else {
+                if (!$navigationFast.hasClass('active')) {
+                    $navigationFast.addClass('active');
+                    $navigationFast.css({
+                        'margin-top': '0',
+                        'background-color': 'rgba(255,255,255,0.25)'
+                    });
+                }
+            }
+
+            initialPosition = scrollTopCurrent;
+
+            if( $(window).scrollTop() < $headerHeight ) {
+                $('nav#navigation-fast').removeClass('active');
+                $navigationFast.css({
+                        'margin-top': -$navigationFastHeight,
+                        'background-color': 'rgba(255,255,255,0)'
+                });
+            }
+        });
+
+
+        $('nav#navigation-fast').on('click','a.trigger-navigation-main',function(e) {
+            $html.toggleClass('active-navigation-main');
+            $('nav#navigation-main').toggleClass('active');
+
+            $(this).toggleClass('triggered');
+            e.preventDefault();
+        });
+    }
+
+
     function initDribbble() {
         $('nav#navigation-main').on('click','a.trigger-dribbble',function() {
             $html.addClass('active-dribbble');
@@ -59,6 +107,7 @@ var br = (function ($) {
                 match: function () {},
                 unmatch: function () {
                     $html.removeClass('active-navigation-main');
+                    $('nav#navigation-fast').removeAttr('style');
                 }
             };
         }
@@ -119,17 +168,20 @@ var br = (function ($) {
         });
     }
 
+
     $(document).ready(function () {
 
         $html = $('html');
         $body = $('body');
 
         initmobileMainNavigation();
+        initNavigationFast();
         initDribbble();
         initEnquire();
         initDribbbleStream();
         initFixedHeader();
         fadeInImages();
+
     });
 
 }(jQuery));

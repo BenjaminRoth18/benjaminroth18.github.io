@@ -194,7 +194,6 @@ nav#navigation-main {
 .active-navigation-main {
   height: 100%;
   overflow: hidden;
-  position: fixed;
   width: 100%;
 
   nav#navigation-main {
@@ -202,7 +201,8 @@ nav#navigation-main {
     font-size: 1.500em;
     height: 100vh;
     left: 0;
-    position: absolute;
+    margin-top: 0;
+    position: fixed;
     top: 0;
     width: 100vw;
     z-index: 200;
@@ -236,6 +236,10 @@ nav#navigation-main {
     div.item-dribbble-radar {
       display: none;
     }
+
+    a.trigger-dribbble-close {
+      display: block;
+    }
   }
 
   nav#navigation-mobile {
@@ -246,6 +250,7 @@ nav#navigation-main {
 
           span {
             margin: 0;
+            position: relative;
             @include transition(background 0.3s ease);
 
             &:nth-child(1) {
@@ -257,6 +262,7 @@ nav#navigation-main {
             }
 
             &:nth-child(3) {
+              bottom: 1px;
               transform: rotate(-45deg);
             }
           }
@@ -306,6 +312,126 @@ nav#navigation-mobile {
 
   @media screen and (max-width: $break-width-7) {
     display: block;
+  }
+}
+
+
+/**
+ * UI: BASE: NAVIGATION: FAST
+ */
+
+nav#navigation-fast {
+  background: rgba(255,255,255,0.25);
+  left: 0;
+  margin-top: -50.000em;
+  padding: 3.000em 8.000em 1.000em 8.000em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 300;
+  @include clear();
+  @include transition(background 0.3s ease, margin 0.6s ease);
+
+  a.trigger-home {
+    display: inline-block;
+    float: left;
+    padding: 1.200em 1.500em 1.900em 1.500em;
+    position: relative;
+
+    span {
+      background: $color-black;
+      display: block;
+      height: 2px;
+      position: relative;
+      width: 16px;
+
+      &:nth-child(1) {
+        transform: rotate(-45deg);
+        top: 4px;
+      }
+
+      &:nth-child(2) {
+        transform: rotate(45deg);
+        top: 12px;
+      }
+    }
+  }
+
+  a.trigger-navigation-main {
+    display: inline-block;
+    float: right;
+    padding: 1.000em;
+    position: relative;
+
+    span {
+      background: $color-black;
+      display: block;
+      height: 2px;
+      margin: 5px;
+      position: relative;
+      width: 25px;
+    }
+
+    &.triggered {
+      span {
+        &:nth-child(1) {
+          transform: rotate(45deg);
+          top: 7px;
+        }
+
+        &:nth-child(2) {
+          transform: rotate(-45deg);
+          top: 0;
+        }
+
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-width-1) {
+    padding: 1.000em 4.000em 1.000em 4.000em;
+  }
+
+  @media screen and (max-width: $break-width-4) {
+    padding: 1.000em 0 0 0;
+  }
+
+  @media screen and (max-width: $break-width-7) {
+    a.trigger-home {
+      span {
+        height: 1px;
+        width: 12px;
+
+        &:nth-child(1) {
+          top: 5px;
+        }
+      }
+    }
+
+    a.trigger-navigation-main {
+      bottom: 2px;
+
+      span {
+        height: 1px;
+        margin: 6px;
+        width: 20px;
+      }
+
+      &.triggered {
+        span {
+          &:nth-child(1) {
+            top: 5px;
+          }
+
+          &:nth-child(2) {
+            top: -1px;
+          }
+        }
+      }
+    }
   }
 }
 
