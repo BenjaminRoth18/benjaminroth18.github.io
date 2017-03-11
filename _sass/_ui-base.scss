@@ -321,7 +321,7 @@ nav#navigation-mobile {
  */
 
 nav#navigation-fast {
-  background: rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.5);
   left: 0;
   margin-top: -50.000em;
   padding: 3.000em 8.000em 1.000em 8.000em;
@@ -335,7 +335,7 @@ nav#navigation-fast {
   a.trigger-home {
     display: inline-block;
     float: left;
-    padding: 1.200em 1.500em 1.900em 1.500em;
+    padding: 1.200em 1.200em 1.900em 1.200em;
     position: relative;
 
     span {
@@ -400,22 +400,24 @@ nav#navigation-fast {
   }
 
   @media screen and (max-width: $break-width-7) {
+    padding: 0;
+
     a.trigger-home {
       span {
-        height: 1px;
+        height: 2px;
         width: 12px;
 
         &:nth-child(1) {
-          top: 5px;
+          top: 7px;
         }
       }
     }
 
     a.trigger-navigation-main {
-      bottom: 2px;
+      bottom: 1px;
 
       span {
-        height: 1px;
+        height: 2px;
         margin: 6px;
         width: 20px;
       }
@@ -423,11 +425,11 @@ nav#navigation-fast {
       &.triggered {
         span {
           &:nth-child(1) {
-            top: 5px;
+            top: 9px;
           }
 
           &:nth-child(2) {
-            top: -1px;
+            top: 1px;
           }
         }
       }

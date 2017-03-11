@@ -43,7 +43,7 @@ var br = (function ($) {
                     $navigationFast.addClass('active');
                     $navigationFast.css({
                         'margin-top': '0',
-                        'background-color': 'rgba(255,255,255,0.25)'
+                        'background-color': 'rgba(255,255,255,0.5)'
                     });
                 }
             }
