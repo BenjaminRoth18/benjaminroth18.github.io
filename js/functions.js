@@ -23,7 +23,7 @@ var br = (function ($) {
             e.preventDefault();
         });
 
-        $('nav#navigation-main div.wrapper *').on('click',function(e) {
+        $('nav#navigation-main div.wrapper ul').on('click',function(e) {
             e.stopPropagation();
         });
 
