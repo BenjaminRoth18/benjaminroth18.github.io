@@ -14,12 +14,28 @@ var br = (function ($) {
         'break8': '400'
     };
 
+    function globalMobileMainNavigation() {
+        $('nav#navigation-main').on('click',function(e) {
+            $html.removeClass('active-navigation-main');
+            $('nav#navigation-main').removeClass('active');
+            $('nav#navigation-fast a.trigger-navigation-main').removeClass('triggered');
+
+            e.preventDefault();
+        });
+
+        $('nav#navigation-main div.wrapper *').on('click',function(e) {
+            e.stopPropagation();
+        });
+    }
+
     function initmobileMainNavigation() {
         $('nav#navigation-mobile').on('click','a.trigger-navigation-main',function() {
             $html.toggleClass('active-navigation-main');
             $('nav#navigation-main').toggleClass('active');
             $(this).toggleClass('triggered');
         });
+
+        globalMobileMainNavigation();
     }
 
     function initNavigationFast() {
@@ -61,12 +77,25 @@ var br = (function ($) {
 
 
         $('nav#navigation-fast').on('click','a.trigger-navigation-main',function(e) {
+            document.ontouchmove = function() {
+                return true;
+            }
+
             $html.toggleClass('active-navigation-main');
             $('nav#navigation-main').toggleClass('active');
 
             $(this).toggleClass('triggered');
+
+            if($html.hasClass('active-navigation-main')) {
+                document.ontouchmove = function(e){
+                    e.preventDefault();
+                }
+            }
+
             e.preventDefault();
         });
+
+        globalMobileMainNavigation();
     }
 
 
