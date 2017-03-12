@@ -415,7 +415,7 @@ nav#navigation-fast {
     padding: 0;
 
     a.trigger-home {
-      padding-bottom: 2.200em;
+      padding: 1.000em 1.200em 2.000em 1.200em;
 
       span {
         height: 2px;
@@ -429,6 +429,7 @@ nav#navigation-fast {
 
     a.trigger-navigation-main {
       bottom: 1px;
+      padding: 0.800em;
 
       span {
         height: 2px;

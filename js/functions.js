@@ -26,6 +26,18 @@ var br = (function ($) {
         $('nav#navigation-main div.wrapper *').on('click',function(e) {
             e.stopPropagation();
         });
+
+        $html.on('click','a.trigger-navigation-main',function() {
+            document.ontouchmove = function() {
+                return true;
+            }
+
+            if($html.hasClass('active-navigation-main')) {
+                document.ontouchmove = function(e){
+                    e.preventDefault();
+                }
+            }
+        });
     }
 
     function initmobileMainNavigation() {
@@ -77,20 +89,10 @@ var br = (function ($) {
 
 
         $('nav#navigation-fast').on('click','a.trigger-navigation-main',function(e) {
-            document.ontouchmove = function() {
-                return true;
-            }
-
             $html.toggleClass('active-navigation-main');
             $('nav#navigation-main').toggleClass('active');
 
             $(this).toggleClass('triggered');
-
-            if($html.hasClass('active-navigation-main')) {
-                document.ontouchmove = function(e){
-                    e.preventDefault();
-                }
-            }
 
             e.preventDefault();
         });
