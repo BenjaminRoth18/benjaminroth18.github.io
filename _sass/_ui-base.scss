@@ -198,7 +198,7 @@ nav#navigation-main {
 
   nav#navigation-main {
     background: rgba(255,255,255,0.95);
-    font-size: 1.500em;
+    font-size: 2.000em;
     height: 100vh;
     left: 0;
     margin-top: 0;
@@ -268,6 +268,12 @@ nav#navigation-main {
           }
         }
       }
+    }
+  }
+
+  @media screen and (max-width: $break-width-6) {
+    nav#navigation-main {
+      font-size: 1.500em;
     }
   }
 }
@@ -395,6 +401,12 @@ nav#navigation-fast {
     padding: 1.000em 4.000em;
   }
 
+  @media screen and (max-width: $break-width-3) {
+    a.trigger-home {
+      padding-bottom: 2.000em;
+    }
+  }
+
   @media screen and (max-width: $break-width-4) {
     padding: 1.000em 0 0 0;
   }
@@ -403,6 +415,8 @@ nav#navigation-fast {
     padding: 0;
 
     a.trigger-home {
+      padding-bottom: 2.200em;
+
       span {
         height: 2px;
         width: 12px;
