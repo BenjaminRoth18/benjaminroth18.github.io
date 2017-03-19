@@ -91,6 +91,14 @@ article.article-project {
   div.content-article-project {
     padding: 2.500em 0;
 
+    div.content-text {
+      padding-bottom: 1.500em;
+
+      &.space-bottom-none {
+        padding-bottom: 0;
+      }
+    }
+
     h3 {
       font-size: 1.800em;
       font-weight: 600;
@@ -119,8 +127,27 @@ article.article-project {
       margin-bottom: 1.250em;
       @include wrapper($max-width-4,$width-base);
 
+      &.space-bottom-small {
+        margin-bottom: 0.500em;
+      }
+
+      &.space-bottom-large {
+        margin-bottom: 1.667em;
+      }
+
       a {
         @include link-text($color-gold-1,$color-gold-1-8,none,none);
+      }
+    }
+
+    ul {
+      @include wrapper($max-width-4,$width-base);
+
+      > li {
+        font-size: 1.200em;
+        line-height: 140%;
+        list-style-type: disc;
+        margin: 0 0 0.500em 0.917em;
       }
     }
 
@@ -133,6 +160,14 @@ article.article-project {
 
       &.space {
         @include wrapper($max-width-1,$width-base,$width-auto);
+      }
+
+      &.space-bottom-large {
+        padding-bottom: 7.500em;
+      }
+
+      &.space-bottom-xlarge {
+        padding-bottom: 10.000em;
       }
 
       img {
@@ -257,12 +292,18 @@ article.article-project {
         font-size: 1.000em;
       }
 
-      .space-bottom-large {
-        padding-bottom: 5.000em !important;
+      ul {
+        > li {
+          font-size: 1.000em;
+        }
       }
 
       div.image {
         padding: 1.500em 0;
+
+        &.space-bottom-large {
+          padding-bottom: 5.000em !important;
+        }
       }
 
       div.videos {
