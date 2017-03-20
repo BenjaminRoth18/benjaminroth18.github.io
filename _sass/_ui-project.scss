@@ -147,7 +147,7 @@ article.article-project {
         font-size: 1.200em;
         line-height: 140%;
         list-style-type: disc;
-        margin: 0 0 0.500em 0.917em;
+        margin: 0 0 0.500em 1.250em;
       }
     }
 
@@ -160,6 +160,10 @@ article.article-project {
 
       &.space {
         @include wrapper($max-width-1,$width-base,$width-auto);
+      }
+
+      &.space-bottom-medium {
+        padding-bottom: 5.000em;
       }
 
       &.space-bottom-large {
@@ -301,8 +305,16 @@ article.article-project {
       div.image {
         padding: 1.500em 0;
 
+        &.space-bottom-medium {
+          padding-bottom: 2.500em;
+        }
+
         &.space-bottom-large {
-          padding-bottom: 5.000em !important;
+          padding-bottom: 3.000em;
+        }
+
+        &.space-bottom-xlarge {
+          padding-bottom: 5.000em;
         }
       }
 
