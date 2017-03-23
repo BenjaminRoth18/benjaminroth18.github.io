@@ -188,11 +188,11 @@ var br = (function ($) {
         });
     }
 
-    function fadeInImages() {
-        $('img.fade').css('opacity', 0);
+    function initFadeInUp() {
+        $('.set-fadeInUp').css('opacity', 0);
 
-        $('img.fade').waypoint(function() {
-            $(this.element).css('opacity', 1);
+        $('.set-fadeInUp').waypoint(function() {
+            $(this.element).addClass('animated fadeInUp');
         },
         {
             offset: '80%'
@@ -211,8 +211,7 @@ var br = (function ($) {
         initEnquire();
         initDribbbleStream();
         initFixedHeader();
-        fadeInImages();
-
+        initFadeInUp();
     });
 
 }(jQuery));
