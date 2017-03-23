@@ -47,6 +47,12 @@
       "css": "down-open-big",
       "code": 59395,
       "src": "entypo"
+    },
+    {
+      "uid": "b08cfe8039de2ce815686aced2caef06",
+      "css": "download",
+      "code": 59396,
+      "src": "entypo"
     }
   ]
 }
