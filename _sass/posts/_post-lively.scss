@@ -3,6 +3,8 @@
  */
 
 $color-lively-green-1: #3fe4b4;
+$color-lively-purple-1: #828ecc;
+$color-lively-purple-1-8: mix(white, $color-lively-purple-1, 20%);
 
 body.project-lively {
   header#header-main {
@@ -27,6 +29,26 @@ body.project-lively {
           &:before {
             background: $color-white;
             opacity: 0.5;
+          }
+        }
+
+        div.field-btn {
+          margin-bottom: 1.000em;
+
+          a {
+            border: solid 2px $color-lively-purple-1;
+            line-height: 60%;
+            white-space: nowrap;
+            @include link-text($color-white,$color-white,none,none);
+            @include transition(border 0.3s ease);
+
+            &:hover {
+              border: solid 2px $color-lively-purple-1-8;
+            }
+
+            span {
+              @include icon(before,'\e804',0.900em,0.444em,0);
+            }
           }
         }
 

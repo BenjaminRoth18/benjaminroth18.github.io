@@ -41,6 +41,14 @@
                 {% endfor %}
               </ul>
 
+              {% if page.button %}
+                <div class="field-btn">
+                  <a href="{{ page.button }}" target="_blank">
+                    <span>{{ page.button-text }}</span>
+                  </a>
+                </div>
+              {% endif %}
+
               {% if page.image-header-1 %} <img src="{{ page.image-header-1 }}" srcset="{{ page.image-header-1 }} 1x, {{ page.image-header-1-2x }} 2x" alt="{{ page.title-long }}"> {% endif %}
               {% if page.image-header-2 %} <img src="{{ page.image-header-2 }}" srcset="{{ page.image-header-2 }} 1x, {{ page.image-header-2-2x }} 2x" alt="{{ page.title-long }}"> {% endif %}
               {% if page.image-header-3 %} <img src="{{ page.image-header-3 }}" srcset="{{ page.image-header-3 }} 1x, {{ page.image-header-3-2x }} 2x" alt="{{ page.title-long }}"> {% endif %}
