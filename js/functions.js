@@ -199,6 +199,16 @@ var br = (function ($) {
         });
     }
 
+    function initProjectHeaderAnimation() {
+        $('article.article-project div.animation-header').owlCarousel({
+            animateOut: 'fadeOut',
+            animateIn: 'bounceInRight',
+            autoplay: true,
+            items: 1,
+            loop: true
+        });
+    }
+
 
     $(document).ready(function () {
 
@@ -212,6 +222,7 @@ var br = (function ($) {
         initDribbbleStream();
         initFixedHeader();
         initFadeInUp();
+        initProjectHeaderAnimation();
     });
 
 }(jQuery));

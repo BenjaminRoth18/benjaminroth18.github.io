@@ -39,6 +39,7 @@ article.article-project {
           display: inline-block;
           padding: 1.000em;
           @include border-radius(18px);
+          @include transition(border 0.3s ease);
         }
       }
 
@@ -127,7 +128,7 @@ article.article-project {
     h5 {
       font-size: 1.200em;
       font-weight: 600;
-      margin-bottom: 0.250em;
+      margin-bottom: 0.500em;
       @include wrapper($max-width-4,$width-base);
     }
 
@@ -151,6 +152,7 @@ article.article-project {
     }
 
     ul {
+      margin-bottom: 2.000em;
       @include wrapper($max-width-4,$width-base);
 
       > li {
@@ -158,6 +160,28 @@ article.article-project {
         line-height: 140%;
         list-style-type: disc;
         margin: 0 0 0.500em 1.250em;
+      }
+    }
+
+    blockquote {
+      margin-bottom: 1.250em;
+      position: relative;
+      @include wrapper($max-width-4,$width-base);
+
+      &:before {
+        background: $color-grey-8;
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        width: 0.200em;
+        @include border-radius(3px);
+      }
+
+      p {
+        color: $color-grey-3;
+        padding: 0.300em 0 0.300em 1.000em;
+        @include wrapper($max-width-none,$width-auto);
       }
     }
 

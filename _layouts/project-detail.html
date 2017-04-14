@@ -54,6 +54,37 @@
               {% if page.image-header-3 %} <img src="{{ page.image-header-3 }}" srcset="{{ page.image-header-3 }} 1x, {{ page.image-header-3-2x }} 2x" alt="{{ page.title-long }}"> {% endif %}
 
             </div>
+
+            {% if page.animation-header-1 %}
+              <div class="animation-header owl-carousel">
+                {% if page.animation-header-1 %}
+                  <div class="slide">
+                    <img src="{{ page.animation-header-1 }}" srcset="{{ page.animation-header-1 }} 1x" alt="{{ page.title-long }}">
+                  </div>
+                {% endif %}
+                {% if page.animation-header-2 %}
+                <div class="slide">
+                  <img src="{{ page.animation-header-2 }}" srcset="{{ page.animation-header-2 }} 1x" alt="{{ page.title-long }}">
+                </div>
+                {% endif %}
+                {% if page.animation-header-3 %}
+                <div class="slide">
+                  <img src="{{ page.animation-header-3 }}" srcset="{{ page.animation-header-3 }} 1x" alt="{{ page.title-long }}">
+                </div>
+                {% endif %}
+                {% if page.animation-header-4 %}
+                <div class="slide">
+                  <img src="{{ page.animation-header-4 }}" srcset="{{ page.animation-header-4 }} 1x" alt="{{ page.title-long }}">
+                </div>
+                {% endif %}
+                {% if page.animation-header-5 %}
+                <div class="slide">
+                  <img src="{{ page.animation-header-5 }}" srcset="{{ page.animation-header-5 }} 1x" alt="{{ page.title-long }}">
+                </div>
+                {% endif %}
+              </div>
+            {% endif %}
+
           </div>
         </header>
 
