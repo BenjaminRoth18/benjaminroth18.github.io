@@ -152,7 +152,7 @@ article.article-project {
     }
 
     ul {
-      margin-bottom: 2.000em;
+      margin-bottom: 2.500em;
       @include wrapper($max-width-4,$width-base);
 
       > li {
@@ -164,7 +164,7 @@ article.article-project {
     }
 
     blockquote {
-      margin-bottom: 1.250em;
+      margin-bottom: 2.000em;
       position: relative;
       @include wrapper($max-width-4,$width-base);
 
@@ -180,6 +180,7 @@ article.article-project {
 
       p {
         color: $color-grey-3;
+        margin: 0;
         padding: 0.300em 0 0.300em 1.000em;
         @include wrapper($max-width-none,$width-auto);
       }
@@ -206,6 +207,10 @@ article.article-project {
 
       &.space-bottom-xlarge {
         padding-bottom: 10.000em;
+      }
+
+      &.space-none-top {
+        padding-top: 0;
       }
 
       img {
