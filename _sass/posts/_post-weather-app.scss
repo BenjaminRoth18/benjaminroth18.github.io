@@ -58,6 +58,7 @@ body.project-weather-app {
     div.videos {
       video {
         box-shadow: 0 0 12px 0 rgba(0,0,0,0.5);
+        max-width: 100%;
         width: 375px;
       }
     }
@@ -79,11 +80,29 @@ body.project-weather-app {
 
         div.info {
           img {
-            left: 0;
             margin-top: 2.000em;
-            position: static;
-            transform: unset;
+            position: relative;
           }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-width-8) {
+    article.article-project {
+      header.header-article {
+        div.info {
+          img {
+            width: 60%;
+          }
+        }
+      }
+    }
+
+    div.content-article-project {
+      div.videos {
+        video {
+          width: 60%;
         }
       }
     }
