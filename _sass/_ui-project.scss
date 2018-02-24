@@ -160,6 +160,10 @@ article.article-project {
         line-height: 140%;
         list-style-type: disc;
         margin: 0 0 0.500em 1.250em;
+
+        a {
+          @include link-text($color-gold-1,$color-gold-1-8,none,none);
+        }
       }
     }
 
