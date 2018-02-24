@@ -1,0 +1,91 @@
+/**
+ * POST: LIVELY
+ */
+
+$color-weather-app-black: #212432;
+
+body.project-weather-app {
+  header#header-main {
+    background: $color-weather-app-black;
+    @include header(white);
+  }
+
+  article.article-project {
+    header.header-article {
+      background-color: $color-weather-app-black;
+      margin-bottom: 15.000em;
+      padding: 5.000em 0 33.000em 0;
+
+      > div.wrapper {
+        @include wrapper($max-width-2,$width-base);
+      }
+
+      div.info {
+        color: $color-white;
+        padding-bottom: 1.800em;
+        @include wrapper($max-width-4);
+
+        img {
+          left: 50%;
+          position: absolute;
+          margin-top: 4.000em;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  div.content-article-project {
+    div.field-btn {
+      padding: 2.000em 5%;
+      text-align: center;
+
+      a.btn-link {
+        border: solid 2px $color-grey-8;
+        display: inline-block;
+        padding: 1.000em;
+        font-size: 1.200em;
+        @include border-radius(18px);
+        @include link-text($color-black,$color-black,none,none);
+        @include transition(border 0.3s ease);
+
+        &:hover {
+          border: solid 2px $color-grey-9;
+        }
+      }
+    }
+
+    div.videos {
+      video {
+        box-shadow: 0 0 12px 0 rgba(0,0,0,0.5);
+        width: 375px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-width-3) {
+    article.article-project {
+      header.header-article {
+        margin-bottom: 19.000em;
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-width-7) {
+    article.article-project {
+      header.header-article {
+        margin-bottom: 0;
+        padding: 5.000em 0 2.000em 0;
+
+        div.info {
+          img {
+            left: 0;
+            margin-top: 2.000em;
+            position: static;
+            transform: unset;
+          }
+        }
+      }
+    }
+  }
+}
