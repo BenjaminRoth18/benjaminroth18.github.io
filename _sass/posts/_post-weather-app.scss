@@ -37,8 +37,9 @@ body.project-weather-app {
 
   div.content-article-project {
     div.field-btn {
-      padding: 2.000em 5%;
-      text-align: center;
+      border-bottom: solid 1px $color-grey-9;
+      padding-bottom: 3.000em;
+      @include wrapper($max-width-4,$width-base);
 
       a.btn-link {
         border: solid 2px $color-grey-8;
@@ -50,7 +51,7 @@ body.project-weather-app {
         @include transition(border 0.3s ease);
 
         &:hover {
-          border: solid 2px $color-grey-9;
+          border: solid 2px $color-gold-1-5;
         }
       }
     }
@@ -83,6 +84,14 @@ body.project-weather-app {
             margin-top: 2.000em;
             position: relative;
           }
+        }
+      }
+    }
+
+    div.content-article-project {
+      div.field-btn {
+        a.btn-link {
+          font-size: 1.000em;
         }
       }
     }
