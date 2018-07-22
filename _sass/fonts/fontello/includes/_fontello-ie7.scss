@@ -1,20 +1,67 @@
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'fontello';
-  font-style: normal;
-  font-weight: normal;
+[class^='icon-'],
+[class*=' icon-'] {
+    font-family: 'fontello';
+    font-style: normal;
+    font-weight: normal;
 
-  /* fix buttons height */
-  line-height: 1em;
+    /* fix buttons height */
+    line-height: 1em;
 
-  /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
 }
 
-.icon-right-open-big { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe800;&nbsp;'); }
-.icon-left-open-big { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe801;&nbsp;'); }
-.icon-up-open-big { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe802;&nbsp;'); }
-.icon-down-open-big { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe803;&nbsp;'); }
-.icon-download { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe804;&nbsp;'); }
-.icon-twitter { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf099;&nbsp;'); }
-.icon-instagram { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf16d;&nbsp;'); }
-.icon-dribbble { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf31b;&nbsp;'); }
+.icon-right-open-big {
+    *zoom: expression(
+        this.runtimeStyle[ 'zoom' ] = '1',
+        this.innerHTML = '&#xe800;&nbsp;'
+    );
+}
+.icon-left-open-big {
+    *zoom: expression(
+        this.runtimeStyle[ 'zoom' ] = '1',
+        this.innerHTML = '&#xe801;&nbsp;'
+    );
+}
+.icon-up-open-big {
+    *zoom: expression(
+        this.runtimeStyle[ 'zoom' ] = '1',
+        this.innerHTML = '&#xe802;&nbsp;'
+    );
+}
+.icon-down-open-big {
+    *zoom: expression(
+        this.runtimeStyle[ 'zoom' ] = '1',
+        this.innerHTML = '&#xe803;&nbsp;'
+    );
+}
+.icon-download {
+    *zoom: expression(
+        this.runtimeStyle[ 'zoom' ] = '1',
+        this.innerHTML = '&#xe804;&nbsp;'
+    );
+}
+.icon-twitter {
+    *zoom: expression(
+        this.runtimeStyle[ 'zoom' ] = '1',
+        this.innerHTML = '&#xf099;&nbsp;'
+    );
+}
+.icon-instagram {
+    *zoom: expression(
+        this.runtimeStyle[ 'zoom' ] = '1',
+        this.innerHTML = '&#xf16d;&nbsp;'
+    );
+}
+.icon-dribbble {
+    *zoom: expression(
+        this.runtimeStyle[ 'zoom' ] = '1',
+        this.innerHTML = '&#xf31b;&nbsp;'
+    );
+}
+.icon-github-circled {
+    *zoom: expression(
+        this.runtimeStyle[ 'zoom' ] = '1',
+        this.innerHTML = '&#xf09b;&nbsp;'
+    );
+}
