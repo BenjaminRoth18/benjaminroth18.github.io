@@ -19,18 +19,24 @@
 
             <ul class="list-social-links">
                 <li>
-                    <a href="{{ site.dribbble }}" class="icon-dribbble" target="_blank"><span>Dribbble</span></a>
+                    <a href="{{ site.dribbble }}" class="icon-dribbble" target="_blank">
+                        <span>Dribbble</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="{{ site.twitter }}" class="icon-twitter" target="_blank"><span>Twitter</span></a>
+                    <a href="{{ site.twitter }}" class="icon-twitter" target="_blank">
+                        <span>Twitter</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="{{ site.instagram }}" class="icon-instagram" target="_blank"><span>Instagram</span></a>
+                    <a href="{{ site.instagram }}" class="icon-instagram" target="_blank">
+                        <span>Instagram</span>
+                    </a>
                 </li>
             </ul>
 
             <div class="item-dribbble-radar {{include.navclass}}">
-                <a href="#" class="trigger-dribbble" title="Show dribbble stream">
+                <a href="https://dribbble.com/BenjaminRoth" target="_blank" title="Show dribbble stream">
                     <strong>{% include svg/img-icon-dribbble.svg %}</strong>
                     <em>{% include svg/img-icon-dribbble-mobile.svg %}</em>
                     <sup class="circle">
@@ -58,19 +64,17 @@
     <nav id="navigation-fast">
 
         {% if page.layout == 'project-detail' %}
-            <a href="/projects" class="trigger-home">
-                <span></span>
-                <span></span>
-            </a>
+        <a href="/projects" class="trigger-home">
+            <span></span>
+            <span></span>
+        </a>
 
-        {% elsif page.layout == 'home' %}
+        {% elsif page.layout == 'home' %} {% else %}
 
-        {% else %}
-
-            <a href="/" class="trigger-home">
-                <span></span>
-                <span></span>
-            </a>
+        <a href="/" class="trigger-home">
+            <span></span>
+            <span></span>
+        </a>
 
         {% endif %}
 

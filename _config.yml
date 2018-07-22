@@ -22,10 +22,6 @@ markdown: kramdown
 sass:
   style: compressed
 
-plugins: [jekyll-paginate]
-
-paginate: 5
-
 collections:
 - home
 
