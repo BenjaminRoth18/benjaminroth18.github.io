@@ -1,9 +1,9 @@
-# benjaminroth.co.
+# benjaminroth18.github.io.
 
 ---
 
 ## What it is
-This is my current [Portfolio](http://www.benjaminroth.co). Here you`ll find some articles about my latest projects.
+This is my current [Portfolio](https://benjaminroth18.github.io). Here you`ll find some articles about my latest projects.
 
 
 ### Features
@@ -13,7 +13,7 @@ This is my current [Portfolio](http://www.benjaminroth.co). Here you`ll find som
 
 
 ## Screenshot
-![benjaminroth.co](https://raw.githubusercontent.com/BenjaminRoth18/benjaminroth18.github.io/master/screenshot.png)
+![benjaminroth18.github.io](https://raw.githubusercontent.com/BenjaminRoth18/benjaminroth18.github.io/master/screenshot.png)
 
 
 ## Setup
