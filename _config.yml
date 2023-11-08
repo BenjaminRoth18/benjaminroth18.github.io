@@ -8,13 +8,10 @@
 # Site settings
 title: Benjamin Roth.
 email: benjaminroth18@gmail.com
-description: Frontend Engineer based in Munich, Germany.
+description: Software Engineer based in Munich, Germany.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://benjaminroth18.github.io" # the base hostname & protocol for your site
-dribbble: https://dribbble.com/BenjaminRoth
 github: https://github.com/BenjaminRoth18
-instagram: https://www.instagram.com/benjaminroth18
-twitter: https://twitter.com/BennyRoth
 
 # Build settings
 markdown: kramdown
